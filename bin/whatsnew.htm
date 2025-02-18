@@ -1,273 +1,156 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="utf-8" />
 <title>Inno Setup 6 Revision History</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<base href="https://jrsoftware.org/" />
 <style type="text/css">
-    body         { font: small verdana, arial, sans-serif; color: black; background-color: white }
-    a:link       { color: #264b99; background-color: white }
-    a:active     { color: #7799dd; background-color: white }
-    a:visited    { color: #5e85d7; background-color: white }
-    tt           { font: small "courier new", monospace }
-    li           { margin-top: 0.15em; margin-bottom: 0.15em }
-    div.bluehead { text-align: center; color: white; background-color: #264b99; padding: 5px; font-weight: bold }
-    .date        { font-size: x-small; font-weight: bold }
-    .head1       { font-size: xx-large }
-    .head2       { font-size: large }
-    .ver         { font-size: large; font-weight: bold }
+    body         { font: calc(14rem/16)/1.5 "Segoe UI", sans-serif; color: #282828; background-color: white }
+    a:link, a:visited { color: hsl(206, 100%, 37%); background-color: transparent; text-decoration: none }
+    a[href]:hover { color: hsl(206, 100%, 30%); text-decoration: underline }
+    tt, pre      { font: calc(13rem/16)/calc(21rem/16) monospace; color: inherit; background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px }
+    pre          { line-height: normal; padding: 10px; border-radius: 6px }
+    li, div.limargins { margin-top: 5px; margin-bottom: 5px }
+    div.bluehead { text-align: center; color: white; background-color: hsl(206, 100%, 30%); padding: 5px; font-weight: bold; line-height: normal }
+    .date        { font-size: calc(11rem/16); font-weight: bold }
+    .head1       { font-size: calc(32rem/16) }
+    .head2       { font-size: calc(20rem/16) }
+    .ver         { font-size: calc(20rem/16); font-weight: bold }
 </style>
 </head>
 <body>
 
 <div class="bluehead"><span class="head1">Inno Setup 6</span><br /><span class="head2">Revision History</span></div>
 
-<p>Copyright &copy; 1997-2020 <a href="https://jrsoftware.org/">Jordan Russell</a>. All rights reserved.<br />
-Portions Copyright &copy; 2000-2020 Martijn Laan. All rights reserved.<br />
-For conditions of distribution and use, see <a href="https://jrsoftware.org/files/is/license.txt">LICENSE.TXT</a>.
+<p>Copyright © 1997-2025 <a href="./">Jordan Russell</a>. All rights reserved.<br />
+Portions Copyright © 2000-2025 Martijn Laan. All rights reserved.<br />
+For conditions of distribution and use, see <a href="files/is/license.txt">LICENSE.TXT</a>.
 </p>
 
-<p><b>Want to be notified by e-mail of updates?</b> Then <a href="https://jrsoftware.org/ismail.php">click here to subscribe</a> to the Inno Setup announcements mailing list.<br /><b>If you subscribed before October 2019, please resubscribe.</b></p>
+<p><b>Want to be notified by e-mail of new Inno Setup releases?</b> <a href="ismail.php">Subscribe</a> to the Inno Setup Mailing List!</p>
 
-<p><a name="6.0.5"></a><span class="ver">6.0.5 </span><span class="date">(2020-05-21)</span></p>
+<p><a name="6.4.1"></a><span class="ver">6.4.1 </span><span class="date">(2025-02-12)</span></p>
+<p><span class="head2">Compiler IDE changes</span></p>
 <ul>
-  <li>Changes to further help protect installers against potential DLL preloading attacks.</li>
-  <li>Compiler IDE change: added <a href="https://jrsoftware.org/ismail.php">Inno Setup Mailing List</a> menu item to the Help menu.</li>
-  <li>Inno Setup can now be installed using the new <a href="https://github.com/microsoft/winget-cli">Windows Package Manager</a>.</li>
-  <li>Minor tweaks.</li>
-</ul>
-
-<p><a name="6.0.4"></a><span class="ver">6.0.4 </span><span class="date">(2020-03-12)</span></p>
-<ul>
-  <li>[Setup] section directives <tt>LicenseFile</tt>, <tt>InfoBeforeFile</tt> and <tt>InfoAfterFile</tt> now support objects such as images in .rtf (rich text) files.</li>
-  <li>Added new constant: <tt>{usersavedgames}</tt>.</li>
-  <li>Compiler IDE changes:
-  <ul>
-    <li>The Welcome dialog is now higher and wider by default and also resizable.</li>
-    <li>Added Dark theme support to the scrollbars (on newer versions of Windows) and the bottom tab set.</li>
-  </ul>
-  </li>
-  <li>Restart Manager changes:
-  <ul>
-    <li>Setup now ignores attempts by the script to register Setup itself with Restart Manager for a being in use check.</li>
-    <li>If all files are excluded by [Setup] section directive <tt>CloseApplicationsFilter</tt>, Setup now no longer calls Restart Manager's RmGetList asking it to check 0 files.</li>
-    <li>/LOG: Now logs how many files Setup asked Restart Manager's RmGetList to check.</li>
-    <li>Added new command line parameter /LOGCLOSEAPPLICATIONS. Instructs Setup to create extra logging when closing applications for debugging purposes.</li>
-    <li><i>Fix:</i> [Setup] section directive <tt>CloseApplicationsFilter</tt> was ignored by checks for [InstallDelete] entries.</li>
-  </ul>
-  </li>
-  <li>Windows AppLocker publisher conditions are now supported by Setup up to and including the file name level.</li>
-  <li>Pascal Scripting change: Added new <tt>IsDotNetInstalled</tt> support function, based on code by <a href="http://www.kynosarges.de/DotNetVersion.html">Cristoph Nahr</a>.</li>
-  <li>Inno Setup Preprocessor (ISPP) change: Added new <tt>UpperCase</tt> support function.</li>
-  <li><i>Fix:</i> Event attributes for uninstall event functions now actually work.</li>
-  <li>Minor tweaks and documentations improvements.</li>
-  <li>Enabled HTTPS on <a href="https://jrsoftware.org/">jrsoftware.org</a>.</li>
-</ul>
-
-<p><a name="6.0.3"></a><span class="ver">6.0.3 </span><span class="date">(2019-10-11)</span></p>
-<ul>
-  <li>/LOG: Now logs Windows compatibility mode when this is activated by the user.</li>
-  <li>Added new [Setup] section directive: <tt>SignToolRunMinimized</tt>.</li>
-  <li>[Setup] section directive <tt>UsePreviousLanguage</tt> now also has an effect when the <i>Select Language</i> dialog is not displayed because Setup is for example running silently.</li>
-  <li>Checkboxes displayed by lists now look better on high DPI systems.</li>
-  <li>Compiler IDE changes:
-  <ul>
-    <li>Added Dark theme support to the toolbar.</li>
-    <li>When paused on a breakpoint in the [Code] section the new "Debug Call Stack" view now shows the call stack.</li>
-    <li>The "Compiler Output" and "Debug Output" views now support multi selection, an extra <i>Select All</i> popup menu item and <i>Ctrl+C</i> and <i>Ctrl+A</i> keyboard shortcuts. The <i>Copy</i> action now only copies the selected lines instead of all lines.</li>
-  </ul>
-  </li>
-  <li>Inno Setup Preprocessor (ISPP) changes:
-  <ul>
-    <li>Array variables declared with <tt>#dim</tt> can now be initialized directly, like <tt>#dim MyArray[3] {1, 2, 3}</tt> for example.</li>
-    <li>Added new predefined variable <tt>Tab</tt>.</li>
-  </ul>
-  </li>
-  <li>Pascal Scripting change: Added new <tt>Set8087CW</tt> and <tt>Get8087CW</tt> support functions.</li>
-  <li>Some messages have been added in this version: (<a href="https://github.com/jrsoftware/issrc/commit/dfdf02aef168be458b64e77afb20ae53a5b4f2ec">View differences in Default.isl</a>).
-  <ul>
-    <li>PrepareToInstallNeedsRestart: This message is used by the <i>Preparing to Install</i> wizard page if a restart is needed. If this message is not set by a translation, Setup will instead use FinishedRestartLabel and FinishedRestartMessage as before.</li>
-    <li>ComponentsDiskSpaceGBLabel and DiskSpaceGBLabel: These messages are used by Setup to display required disk spaces of 1000.0 MB or more in gigabytes instead of in megabytes. If these messages are not set by a translation, Setup will instead use ComponentsDiskSpaceMBLabel and DiskSpaceMBLabel as before.</li>
-  </ul>
-  </li>
-  <li>Added official Slovak translation.</li>
-  <li>Minor tweaks and cosmetic fixes.</li>
-</ul>
-
-<p>Contributions via <a href="https://github.com/jrsoftware/issrc" target="_blank">GitHub</a>: Thanks to Vizit0r for their contributions.</p>
-
-<p><a name="6.0.2"></a><span class="ver">6.0.2 </span><span class="date">(2019-04-26)</span></p>
-<ul>
-  <li>Added new <tt>{sysnative}</tt> constant.</li>
-  <li>Pascal Scripting changes:
-  <ul>
-    <li>Added new <tt>WizardSelectComponents</tt> and <tt>WizardSelectTasks</tt> support functions.</li>
-    <li>Renamed the <tt>IsComponentSelected</tt> and <tt>IsTaskSelected</tt> support functions to <tt>WizardIsComponentSelected</tt> and <tt>WizardIsTaskSelected</tt>. The old names are still supported, but it is recommended to update your scripts to the new names and the compiler will issue a warning if you don't.</li>
-  </ul>
-  </li>
-  <li>Minor cosmetic fixes.</li>
-</ul>
-
-<p><a name="6.0.1"></a><span class="ver">6.0.1-beta </span><span class="date">(2019-03-07)</span></p>
-<ul>
-  <li><i>Fix:</i> In 6.0.0 it was no longer possible to use [Setup] section directive <tt>InfoAfterFile</tt>.</li>
-  <li>Pascal Scripting changes:
-  <ul>
-    <li><i>Fix:</i> Added <tt>Anchors</tt> properties to all controls created by the <tt>Create...Page</tt> support functions to add full support for <tt>WizardResizable</tt> and <tt>WizardSizePercent</tt>.</li>
-    <li>Updated the <i>AllPagesExample.iss</i> example script with examples of all <tt>Create...Page</tt> support functions.</li>
-    <li>The multi-line edit control created by the <tt>CreateOutputMsgMemoPage</tt> support function now has a more modern look.</li>
-  </ul>
-  </li>
-  <li>Added official German translation.</li>
-  <li>Demoted the official <a href="https://raw.github.com/jrsoftware/issrc/master/Files/Languages/Unofficial/Greek.isl">Greek</a>, <a href="https://raw.github.com/jrsoftware/issrc/master/Files/Languages/Unofficial/Hungarian.isl">Hungarian</a>, and <a href="https://raw.github.com/jrsoftware/issrc/master/Files/Languages/Unofficial/ScottishGaelic.isl">Scottish Gaelic</a> translations to unofficial because of a no longer available maintainer. To send updates yourself, see <a href="http://news.jrsoftware.org/read/article.php?id=2514&amp;group=jrsoftware.innosetup.translations#2514">this post</a> for what needs updating and use <a href="https://jrsoftware.org/files/istrans/send2.php">this form</a> to send updates (or use <a href="https://github.com/jrsoftware/issrc" target="_blank">GitHub</a>). See the <a href="https://jrsoftware.org/files/istrans/">Inno Setup Translations</a> page for more information.</li>
-  <li>Other documentation improvements.</li>
-</ul>
-
-<p><a name="6.0.0"></a><span class="ver">6.0.0-beta </span><span class="date">(2019-02-11)</span></p>
-<p>Inno Setup 6 introduces a large number of changes:</p>
-<p><span class="head2">Administrative vs. non administrative install mode</span></p>
-<p>A number of changes have been made to the administrative vs. non administrative install mode functionality:</p>
-<ul>
-  <li>Added new &quot;auto&quot; constants which automatically map to their &quot;common&quot; form unless the installation is running in non administrative install mode, in which case they map to their &quot;user&quot; form. It is recommended to update your scripts to use these "auto" constants as much as possible to avoid mistakes. The list of added &quot;auto&quot; constants is: <tt>{autoappdata}</tt>, <tt>{autocf}</tt>, <tt>{autocf32}</tt>, <tt>{autocf64}</tt>, <tt>{autodesktop}</tt>, <tt>{autodocs}</tt>, <tt>{autopf}</tt>, <tt>{autopf32}</tt>, <tt>{autopf64}</tt>, <tt>{autoprograms}</tt>, <tt>{autostartmenu}</tt><tt>, {autostartup}</tt>, and <tt>{autotemplates}</tt>.</li>
-  <li>Updated all examples and the Compiler IDE's New Script Wizard to use <tt>{autopf}</tt> instead of <tt>{pf}</tt>, etc.</li>
-  <li><b>Change in default behavior:</b> The &quot;common&quot; shell folder constants are no longer mapped to their "user" form if the installation is running in non administrative install mode. Instead they simply return the requested common directory. The list of affected &quot;common&quot; constants is: <tt>{commonappdata}</tt>, <tt>{commondesktop}</tt>, <tt>{commondocs}</tt>, <tt>{commonprograms}</tt>, <tt>{commonstartmenu}</tt><tt>, {commonstartup}</tt>, and <tt>{commontemplates}</tt>.</li>
-  <li>The <tt>{pf}</tt> and <tt>{cf}</tt> constants have been renamed to <tt>{commonpf}</tt> and <tt>{commoncf}</tt>. This includes <tt>{pf32}</tt> to <tt>{commonpf32}</tt>, etc. The old names are still supported, but it is recommended to update your scripts to the new names and the compiler will issue a warning if you don't.</tt>
-  <li>The <tt>{commonfavorites}</tt> constant has been removed: this directory doesn't exist anymore in Windows.</li>
-  <li>The <tt>{userpf}</tt>, <tt>{usercf}</tt>, and <tt>{username}</tt> constants and the <tt>AlwaysUsePersonalGroup</tt> [Setup] section directive can now correctly trigger a <a href="https://jrsoftware.org/files/is5-whatsnew.htm#useduserareaswarnings">used user areas warning</a>.</li>
-  <li>Pascal Scripting change: Removed the <tt>GetShellFolder</tt> support function. As the help file already recommended, use <tt>ExpandConstant</tt> instead.</li>
-</ul>
-<ul>
-  <li>Added new [Registry] section <tt>Root</tt> value <tt>HKA</tt>. Equals <tt>HKLM</tt> in administrative install mode, and <tt>HKCU</tt> otherwise. Also supported by <tt>{reg:...}</tt> constants and <tt>HKA32</tt>/<tt>HKA64</tt> are also supported. Note: <tt>HKA</tt> (like <tt>HKCU</tt>) should only be used for settings which are compatible with roaming profiles.</li>
-  <li>Using [Registry] section <tt>Root</tt> value <tt>HKCR</tt> is no longer recommended, use <tt>HKA</tt> with the <tt>Subkey</tt> parameter set to &quot;Software\Classes&quot; instead.</li>
-  <li>Pascal Scripting change: Added <tt>HKA</tt> and <tt>HKEY_AUTO</tt> constants. <tt>HKA32</tt>, <tt>HKA64</tt>, <tt>HKEY_AUTO_32</tt>, and <tt>HKEY_AUTO_64</tt> are also supported.</li>
-</ul>
-<ul>
-  <li>The Compiler IDE's New Script Wizard now offers an option to select administrative or non administrative install mode and outputs scripts which work in both modes.</li>
-  <li>Pascal Scripting change: Added new <tt>IsAdminInstallMode</tt> support function.</li>
-  <li>Added a <a href="https://jrsoftware.org/ishelp/index.php?topic=admininstallmode">Non Administrative Install Mode</a> topic to the help file.</li>
-</ul>
-<p><span class="head2">Overridable install mode</span></p>
-<p>Once your script is fully updated to support both administrative and non administrative install mode (for example by using the new &quot;auto&quot; constants and the new [Registry] section <tt>Root</tt> value <tt>HKA</tt>) you can then use the following:</p>
-<ul>
-  <li>Added new [Setup] section directive: <tt>PrivilegesRequiredOverridesAllowed</tt>, which can be set to one or more overrides which allow the end user to override the script's default <tt>PrivilegesRequired</tt> setting. The following overrides are supported: <tt>commandline</tt> and <tt>dialog</tt>.</li>
-  <ul>
-    <li>If override <tt>commandline</tt> is allowed then Setup will support two additional command line parameters to override the script's default <tt>PrivilegesRequired</tt> setting: /ALLUSERS and /CURRENTUSER.</li>
-    <li>If override <tt>dialog</tt> is allowed then Setup will ask the user to choose the install mode based on the script's default <tt>PrivilegesRequired</tt> setting using a suppressible dialog (<a href="https://i.imgur.com/up287vq.png">example</a> if <tt>PrivilegesRequired</tt> is set to <tt>admin</tt>). Allowing <tt>dialog</tt> automatically allows <tt>commandline</tt> and when one of the command line parameters is used then Setup will not ask the user.</li>
-  </ul>
-  <li>Added new [Setup] section directive: <tt>UsePreviousPrivileges</tt>. If this directive is set to <tt>yes</tt> (which it is by default) and <tt>PrivilegesRequiredOverridesAllowed</tt> is set to <tt>dialog</tt>, at startup Setup will look in the registry to see if the <a href="https://jrsoftware.org/ishelp/index.php?topic=sameappnotes">same application</a> is already installed in one of the two install modes, and if so, it will use that install mode and not ask the user.</li>
-</ul>
-<ul>
-  <li>The Compiler IDE's New Script Wizard now offers options to allow the <tt>commandline</tt> and <tt>dialog</tt> overrides.</li>
-  <li>Inno Setup's own installer script now supports both administrative and non administrative install mode and allows the <tt>dialog</tt> override.</li>
-</ul>
-<p><span class="head2">Side-by-side installations</span></p>
-<p>Support for <a href="https://jrsoftware.org/ishelp/index.php?topic=sidebyside">side-by-side</a> installations has been improved:</p>
-<ul>
-  <li>Two separate installation runs that do not share the same administrative or non administrative install mode no longer count as the <a href="https://jrsoftware.org/ishelp/index.php?topic=sameappnotes">same application</a>. This means you can now install these modes <a href="https://jrsoftware.org/ishelp/index.php?topic=sidebyside">side-by-side</a> even if the installers share the same <tt>AppId</tt> setting (or if <tt>AppId</tt> is not set, the same <tt>AppName</tt> setting) without the odd side effects you would get in previous versions.</li>
-  <li><b>Change in default behavior:</b> To avoid entries with identical names in the <i>Add/Remove Programs</i> Control Panel applet Setup will now automatically mark the new entry with a text like &quot;Current user&quot; or &quot;64-bit&quot; when necessary during a <a href="https://jrsoftware.org/ishelp/index.php?topic=sidebyside">side-by-side</a> installation.</a>
-  <li>Added a <a href="https://jrsoftware.org/ishelp/index.php?topic=sidebyside">Side-by-side installation</a> topic to the help file.</li>
-</ul>
-<p><span class="head2">Resizable wizard window</span></p>
-<p>The wizard window is now optionally resizable:</p>
-<ul>
-  <li>Added new [Setup] section directive: <tt>WizardResizable</tt>. If this directive is set to <tt>yes</tt>, the user will be able to resize the main Setup wizard window.</li>
-  <li>Added new [Setup] section directive: <tt>WizardSizePercent</tt>, which can be used to increase the default size of all Setup and Uninstall wizard windows without increasing the font size.</li>
-  <li>Pascal Scripting changes:
-  <ul>
-    <li>Added new <tt>Anchors</tt> property to all controls and new <tt>KeepSizeY</tt> property to <tt>TSetupForm</tt> which allows you to add full support for <tt>WizardResizable</tt> and <tt>WizardSizePercent</tt> to all your custom controls, custom wizard pages and <tt>TSetupForm</tt> forms if you have any. See the <i>CodeClasses.iss</i> example script for an example. This example also shows other changes done to <tt>TSetupForm</tt>.</li>
-    <li>Added new <tt>Constraints</tt> property to the <tt>TForm</tt> support class.</li>
-  </ul>
-  </li>
-</ul>
-<p><span class="head2">New modern wizard style</span></p>
-<p>The wizard window now supports a more modern look:</p>
-<ul>
-  <li>Added new [Setup] section directive: <tt>WizardStyle</tt>. If this directive is set to <tt>modern</tt>, Setup and Uninstall will show a more modern look and also the defaults for <tt>WizardResizable</tt> and <tt>WizardSizePercent</tt> change to respectively <tt>yes</tt> and <tt>120,120</tt>.</li>
-  <li><b>Change in default behavior:</b> Earlier versions of Inno Setup also supported <tt>WizardStyle</tt> and if you still have <tt>WizardStyle=modern</tt> in your script (which was allowed for backward compatibility but didn't actually change anything) and don't want to new modern look, you should remove this line or change it to <tt>WizardStyle=classic</tt>.</li>
-  <li>Updated all examples and the Compiler IDE's New Script Wizard to use <tt>WizardStyle=modern</tt>.</li>
-  <li>Pascal Scripting change: Added new <tt>SurfaceColor</tt> property to the <tt>TWizardPage</tt> support class.</li>
-</ul>
-<p>A few elements now always have a more modern look regardless of the <tt>WizardStyle</tt> setting:</p>
-<ul>
-  <li>The <i>Select Language</i> dialog now has more modern look, consistent with Windows 10 task dialogs and message boxes (<a href="https://i.imgur.com/4xWv5tw.png">example</a>).</li>
-  <li>Flattened a few elements of Setup's interface for a more modern look.</li>
-</ul>
-<p><span class="head2">Compiler IDE updates</span></p>
-<p>The look and feel of the Compiler IDE has been updated:</p>
-<ul>
-    <li>Updated all toolbar icons and flattened the interface of the Compiler IDE for a more modern look.</li>
-    <li>The Compiler IDE now supports three themes: Light (<a href="https://i.imgur.com/NVhZ0ml.png">example</a>), Dark (<a href="https://i.imgur.com/J4LMPAa.png">example</a>) and Classic (<a href="https://i.imgur.com/x513SpW.png">example</a>). The Light theme is the new default theme, unless the system is running Windows 10 and dark mode is enabled in which case the Dark theme is the default theme. The active theme can be changed in the options.</li>
-    <li>The Compiler IDE now uses per-monitor DPI awareness mode and also allows the "Segoe UI" font for its interface elements.</li>
-    <li>The "Compiler Output" view is now colorized. This can be turned off in the options.</li>
-    <li>The "Debug Output" view now uses bold text for any entry lines such as '-- File entry --'.</li>
-    <li>Options button <i>Associate .iss files with this compiler</i> can now associate for the current user instead of displaying an error if administrative privileges are not available.</li>
-    <li>Options <i>Allow Undo after save</i> and <i>Show indentation guides</i> are now on by default for new installations.</li>
-    <li>The "Configure Sign Tools" window is now wider by default and also resizable.</li>
+  <li>Added mouseover tooltips for all Pascal Scripting support functions and class members showing their prototype. Always shows all classes' members instead of just those of the current object's class.</li>
+  <li>Autocompletion lists now use the same font as the editor.</li>
+  <li><i>Fix:</i> When the IDE was started for the first time on a system with a DPI setting over 100%, the editor's initial font size was larger than expected.</li>
 </ul>
 <p><span class="head2">Other changes</span></p>
 <ul>
-  <li><b>OS requirements change:</b> Windows 2000, XP, and Server 2003 are no longer supported. Windows Vista is now the minimum supported operating system.</li>
-  <li><b>Change in default behavior:</b> Starting with Inno Setup 6 there's only one version available: Unicode Inno Setup. Unicode Inno Setup has been available for 9 years but in case you have not yet updated to it: please see the <a href="https://jrsoftware.org/ishelp/index.php?topic=unicode">Unicode Inno Setup</a> topic in the help file for more information. Basically, unless you're using [Code] to make DLL calls with string parameters you shouldn't have to make any changes to your script.</li>
+  <li>{reg:...} constants can now also embed REG_DWORD-type registry values.</li>
+  <li><i>Fix:</i> In 6.4.0, using &quot;Shift+&quot; in a <tt>HotKey</tt> parameter in the [Icons] section didn't work and required &quot;Shift&quot; instead, so for example &quot;Ctrl+ShiftM&quot; instead of &quot;Ctrl+Shift+M&quot;.</li>
+  <li><i>Fix:</i> In 6.4.0, a custom form shown using <tt>[Code]</tt> didn't have a taskbar button if Setup's wizard was not visible at the time.</li>
+  <li>Added official Arabic translation.</li>
+  <li>Some minor tweaks and improvements.</li>
 </ul>
+
+<p><a name="6.4.0"></a><span class="ver">6.4.0 </span><span class="date">(2025-01-09)</span></p>
+<p><span class="head2">Compiler IDE changes</span></p>
+<p>Updated the Scintilla editor component used by the Compiler IDE to the latest version.</p>
+<p>Multiple selection editing has been improved:</p>
 <ul>
-  <li>Added support for 64-bit mode on Windows 10 on ARM which can be used to install ARM64 binaries. See the <i>64BitThreeArch.iss</i> example script for an example which demonstrates how to install a program built for three different architectures (x86, x64, ARM64) using a single installer.</li>
+  <li>Added new <i>Add Next Occurrence</i> menu item to the <i>Edit</i> menu to add the next occurrence of the current word or selected text as an additional selection (Shift+Alt+. or Ctrl+D, see below).</li>
+  <li>Added new <i>Select All Occurrences</i> menu item to the <i>Edit</i> menu to select all occurrences of the current word or selected text (Shift+Alt+; or Ctrl+Shift+L).</li>
+  <li>Added new <i>Select All Find Matches</i> menu item to the <i>Edit</i> menu to select all matches of the last find text (Alt+Enter).<br />Additionally, the <i>Find</i> (Ctrl+F) and <i>Replace</i> (Ctrl+H) dialogs now both support being closed by Alt+Enter to directly select all matches.</li>
+  <li>Added shortcuts to add a cursor or selection up or down (Ctrl+Alt+Up and Ctrl+Alt+Down). For multi-line selections this extends the selection up or down and never shrinks.</li>
+  <li>Added shortcut to add cursors to line ends (Shift+Alt+I). Behaves the same as in Visual Studio Code, so for example does nothing if all selections are empty.</li>
+  <li>Added shortcuts to add a word or line as an additional selection (Ctrl+Double Click and Ctrl+Triple Click or Alt+Double Click and Alt+Triple Click).</li>
+  <li>Added shortcut to remove a selection by clicking it (Ctrl+Click or Alt+Click).</li>
+  <li>Multiple selection now works over Left, Right, Up, Down, Home and End navigation and selection commands.</li>
+  <li>Multiple selection now works over word and line deletion commands, and line end insertion.</li>
+  <li>Multiple selection now works better with Copy and Paste commands.</li>
+  <li>Left, Right, etc. navigation with rectangular selection is now allowed.</li>
+  <li>The Find and Replace dialogs and the tools from the <i>Tools</i> menu which generate script text now all work better with multiple selections present.</li>
 </ul>
+<p>Other editor changes:</p>
 <ul>
-  <li>The Abort/Retry/Ignore dialogs shown by Setup now display task dialogs. These task dialogs are much more user friendly than the message boxes previously used (example: <a href="https://i.imgur.com/NfbJAsS.png">task dialog</a> versus <a href="https://i.imgur.com/n7wh2UC.png">message box</a>).</li>
-  <li>Added new [Setup] section directive: <tt>VersionInfoOriginalFileName</tt>, which sets the original filename version value.</li>
-  <li>The <tt>Permissions</tt> parameter supported by [Files], [Dirs] and [Registry] entries now also allows you to grant permission to the Guests group, the Local Service account, the Network Service account, and to the Creator Owner.</li>
-  <li>Added new special-purpose <i>HelpTextNote</i> message that can be used to specify one or more lines of text that are added to the list of parameters in the summary shown when passing /HELP on the command line. This message defaults to an empty string so make sure to provide a non-empty default for all languages from your main script if you want to use it.</li>
-  <li>The compiler now supports UTF-8 encoded .isl files without requiring a special extension. Translators should still always set <tt>LanguageCodePage</tt> when possible.</li>
-  <li>The compiler will now throw an error if the $f sequence is missing in a Sign Tool command instead of executing it anyway.</li>
-  <li>Fix: The compiler now checks <tt>OutputBaseFileName</tt> and <tt>OutputManifestFile</tt> for bad characters even if <tt>Output</tt> is set to <tt>no</tt>.</li>
-  <li>/LOG: Now logs some additional information about Restart Manager.</li>
+  <li>Added support for Visual Studio Code-style editor shortcuts, like Ctrl+D to Add Next Occurrence, Ctrl+Shift+K to delete a line and Alt+Click to add an additional cursor or remove a selection.<br />To activate this use the <i>Options</i> menu item in the <i>Tools</i> menu to set the new <i>Keys</i> option in the <i>Editor</i> group to <i>Visual Studio Code</i>.<br />The updated <a href="https://jrsoftware.org/ishelp/index.php?topic=compformshortcuts">Compiler IDE Keyboard And Mouse Commands</a> help topic lists all differences with the classic keyboard and mouse shortcuts.</li>
+  <li>Only if Visual Studio Code-style editor shortcuts have been activated: Added shortcuts to copy line down (Shift+Alt+Down) and to indent or unindent lines (Ctrl+] and Ctrl+[).</li>
+  <li>Added parameter hints for all Pascal Scripting support functions for quick reference to the function's parameter names, types, and order. Parameter hints can be invoked manually by pressing Ctrl+Shift+Space or automatically by using the new <i>Invoke parameter hints automatically</i> option which is enabled by default.</li>
+  <li>Added autocompletion support for all Pascal Scripting support functions, types, constants, etcetera. Existing option <i>Invoke autocompletion automatically</i> controls whether the autocompletion suggestions appear automatically or only when invoked manually by pressing Ctrl+Space or Ctrl+I.</li>
+  <li>Added parameter hints and autocompletion support for all Pascal Scripting support class members and properties. Both always show all classes' members and properties instead of just those of the current object's class.</li>
+  <li>Added autocompletion support for all Pascal Scripting event function parameters. Always shows all parameters instead of just those of the current event function.</li>
+  <li>Added autocompletion support for the [Messages] section.</li>
+  <li>Improved autocompletion support for all Flags parameters: now works for multiple flags instead of for the first only.</li>
+  <li>Added new <i>Enable section folding</i> option which allows you to temporarily hide sections while editing by clicking the new minus or plus icons in the editor's gutter or by using the new keyboard shortcuts (Ctrl+Shift+[ to fold and Ctrl+Shift+] to unfold) or menu items. Enabled by default.</li>
+  <li>The editor's gutter now shows change history to keep track of saved and unsaved modifications. Always enabled.</li>
+  <li>The editor's font now defaults to Consolas if available, consistent with most other modern editors.</li>
+  <li>The editor can now be scrolled horizontally instead of vertically by holding the Shift key while rotating the mouse wheel. Horizontal scroll wheels are now also supported.</li>
+  <li>Cut (Ctrl+X or Shift+Delete) and Copy (Ctrl+C or Ctrl+Insert) now cut or copy the entire line if there's no selection, consistent with most other modern editors.</li>
+  <li>Added new shortcuts to move selected lines up or down (Alt+Up and Alt+Down).</li>
+  <li>Added new shortcut and menu item to the <i>Edit</i> menu to toggle line comment (Ctrl+/).</li>
+  <li>Added new shortcut and menu item to the <i>Edit</i> menu to go to matching brace (Ctrl+Shift+\).</li>
+  <li>Moved the <i>Word Wrap</i> option to the <i>View</i> menu and added a shortcut for it (Alt+Z).</li>
+  <li>Added a right-click popup menu to the editor's gutter column for breakpoints.</li>
+  <li>Added dark mode support to autocompletion lists and also added a minimum width.</li>
+  <li>Added new <i>Show whitespace</i> option. Disabled by default.</li>
+  <li>Improved brace highlighting.</li>
+  <li>Fixed an issue when the <i>Auto indent mode</i> and <i>Allow cursor to move beyond end of lines</i> options are both enabled.</li>  
 </ul>
+<p>Other Compiler IDE changes:</p>
 <ul>
+  <li>Shortcuts Alt+Left and Alt+Right now always navigate back and forward even if Visual Studio-style menu shortcuts have been activated.<br />Because of this Alt+Right can no longer be used to initiate auto complete, instead the existing Ctrl+Space or Ctrl+I alternatives must be used.</li>
+  <li>Moved the list of recently opened files into a new <i>Open Recent</i> submenu of the <i>Files</i> menu.</li>
+  <li>Added new <i>Use Regular Expressions</i> option to the <i>Edit</i> menu to enable or disable the use of regular expressions for all find and replace operations and added a shortcut for it (Ctrl+Alt+R or Alt+R). Also added a small panel to the statusbar to indicate the current state.</li>
+  <li>The Find and Replace dialogs now support using Shift+Enter to temporarily search in the opposite direction.</li>
+  <li>Added shortcuts to select a tab (Ctrl+1 through Ctrl+9).</li>
+  <li>Added alternative shortcut for the <i>Compile</i> menu item in the <i>Build</i> menu (Shift+F9 or F7).</li>
+  <li>Added shortcut to the <i>Options</i> menu item in the <i>Tools</i> menu (Ctrl+,).</li>
+  <li>Removed the length limitation when entering a Sign Tool command and increased control height.</li>
+  <li>Added a banner which is displayed to each user after each update and links to this revision history.</li>
+  <li>Enabled dark mode support for the menus on Windows 11 Version 24H2 (2024 Update).</li>
+</ul>
+<p><span class="head2">Other changes</span></p>
+<ul>
+  <li>Updated the LZMA SDK used by Inno Setup to the latest version, increasing the speed of LZMA and LZMA2 compression (by 10% in a test with default settings) without changing the compression ratio. Compression memory requirements have increased by about 4%. This also made it possible to add support for extracting 7-Zip archives, see below.</li>
+  <li>Updated the encryption algorithm and key derivation function used by Inno Setup to XChaCha20 and PBKDF2-HMAC-SHA256 respectively, increasing security. This code is built-in: the separate ISCrypt.dll "encryption module" is no longer used and will be automatically deleted when you update.</li>
+  <li>Added <tt>[Setup]</tt> section directive <tt>EncryptionKeyDerivation</tt> to change the number of PBKDF2-HMAC-SHA256 iterations to use from the default of 200000 to another value.</li>
+  <li>Replaced all remaining use of MD5 and SHA-1 hashes with SHA-256 hashes, without removing the MD5 and SHA-1 Pascal Scripting and ISPP support functions.</li>
+  <li>At long last, Setup's wizard window now shows a thumbnail image on its taskbar button, and animates correctly when minimized and restored. As part of this work, support for the long-deprecated <tt>[Setup]</tt> section directive <tt>WindowVisible</tt>, which was used to enable a 1990s-style blue gradient background behind the wizard window, has been dropped. For the same reason Pascal Scripting support object <tt>MainForm</tt> has been removed.</li>
+  <li>The aspect ratio of Setup's large and small wizard images (as specified by <tt>WizardImageFile</tt> and <tt>WizardSmallImageFile</tt>) is now maintained when the window is scaled. Previously, depending on the font and font size used, they could have appeared horizontally stretched or squished.</li>
+  <li>The size of the small wizard image area has been extended to 58&times;58 (at standard DPI with the default font). Previous versions used a non-square 55&times;58 size, which made the default image look slightly stretched.</li>
+  <li>When disk spanning is enabled and Setup cannot find the needed disk slice file (e.g., <tt>setup-2.bin</tt>) in the source directory, it no longer automatically searches for it in a directory named <tt>DISKx</tt> one level up, where <tt>x</tt> is the disk number. Though consistent with old installers from the 16-bit era, this behavior wasn't documented.</li>
+  <li>The New Script Wizard now sets <tt>UninstallDisplayIcon</tt> when an .exe is chosen as the main executable file.</li>
+  <li>Merged the Inno Setup Preprocessor documentation into the main documentation instead of being separate.</li>
+  <li>Added a dark mode version of the documentation, automatically used by the Compiler IDE if a dark theme is chosen.</li>
   <li>Pascal Scripting changes:
   <ul>
-    <li>Using event attributes it is now possible to have multiple implementations of the same event function in your script. This is especially useful in included scripts implementing an event function to avoid conflicts with the main script. See the help file for more information and the <i>CodeExample1.iss</i> example script for an example.</li>
-    <li>Added new <tt>TaskDialogMsgBox</tt> and <tt>SuppressibleTaskDialogMsgBox</tt> support functions which display a message box using a task dialog (<a href="https://i.imgur.com/hU4RQP2.png">example</a>). See the help file for more information and the <i>CodeClasses.iss</i> example script for an example.</li>
-    <li>Added new <tt>CreateCallback</tt> support function which allows you to perform direct callbacks from DLL functions (like Windows API functions) to functions in your script. See the help file and the <i>CodeDll.iss</i> example script for an example.</li>
-    <li>[Setup] section directives <tt>ChangesAssociations</tt> and <tt>ChangesEnvironment</tt> may now be set to a boolean expression, which may contain calls to check functions.</li>
-    <li>Many properties which did not support mouseover evaluation from the Compiler IDE now do.</li>
-    <li>To enable mouseover evaluation of their properties from the Compiler IDE, support objects <tt>MainForm</tt>, <tt>WizardForm</tt>, and <tt>UninstallProgressForm</tt> no longer raise an internal error if you try to access them before the forms are created. To get the old behaviour use new support functions <tt>GetMainForm</tt>, <tt>GetWizardForm</tt>, and <tt>GetUninstallProgressForm</tt> instead.</li>
-    <li>Added new <tt>BevelKind</tt> property to the <tt>TPanel</tt> support class and new <tt>BevelKind</tt> and <tt>BorderStyle</tt> properties to the <tt>TRichEditViewer</tt> support class, allowing you to enable a flatter interface for a more modern look. See the <i>CodeClasses.iss</i> example script for an example.</li>
-    <li>Added new <tt>SameStr</tt> and <tt>SameText</tt> support functions.</li>
-    <li>Renamed the <tt>IsAdminLoggedOn</tt> support function to <tt>IsAdmin</tt>. The old name is still supported, but it is recommended to update your scripts to the new name and the compiler will issue a warning if you don't. Also consider using <tt>IsAdminInstallMode</tt> instead.</li>
-    <li>Removed the <tt>TAlphaBitmap</tt> support class. Its functionality is now provided directly by <tt>TBitmap</tt>.</li>
-    <li>Fix: On Windows 10 on ARM, the <tt>IsWin64</tt> support function now correctly returns <tt>True</tt>, and the <tt>ProcessorArchitecture</tt> support function now correctly returns <tt>paARM64</tt>.</li>
+    <li>Added new <tt>Extract7ZipArchive</tt> support function to extract a 7-Zip archive, based on the &quot;7z ANSI-C Decoder&quot; from the LZMA SDK by Igor Pavlov. See the new <a href="https://jrsoftware.org/ishelp/index.php?topic=isxfunc_extract7ziparchive">help topic</a> for information about its limitations.<br />Added new <tt>CreateExtractionPage</tt> support function to easily show the extraction progress to the user.</li>
+    <li>Added new <tt>ExecAndCaptureOutput</tt> support function to execute a program or batch file and capture its <i>stdout</i> and <i>stderr</i> outputs separately.</li>
+    <li>Added new <tt>StringJoin</tt>, <tt>StringSplit</tt>, and <tt>StringSplitEx</tt> support functions.</li>
+    <li>Output logging now raises an exception if there was an error setting up output redirection (which should be very rare). The <i>PowerShell.iss</i> example script has been updated to catch the exception.</li>
+    <li>Added new <tt>NewFolderName</tt> property to support class <tt>TInputDirWizardPage</tt> update the initial value passed to <tt>CreateInputDirPage</tt>.</li>
+    <li>Added new <tt>PopupMode</tt> and <tt>PopupParent</tt> properties to support class <tt>TForm</tt>.</li>
+    <li>Documented support functions <tt>VarArrayGet</tt> and <tt>VarArraySet</tt> which were already available but not documented.</li>
+    <li>Renamed the <tt>FileCopy</tt> support function to <tt>CopyFile</tt>. The old name is still supported, but it is recommended to update your scripts to the new name and the compiler will issue a warning if you don't.</li>
+    <li>Fixed support function <tt>TStream.CopyFrom</tt> by adding a <tt>BufferSize</tt> parameter which was required but missing. Using <tt>$100000</tt> as the value is recommended.</li>
+    <li>Condensed the logging of DLL function imports.</li>
+    <li>Added new <tt>Debugging</tt> support function.</li>
   </ul>
   </li>
+  <li>ISPP change: Added support functions <tt>GetSHA256OfFile</tt>, <tt>GetSHA256OfString</tt>, and <tt>GetSHA256OfUnicodeString</tt>.</li>
+  <li>Inno Setup's Delphi <a href="https://github.com/jrsoftware/issrc" target="_blank">source code</a> has been reorganized to use unit scope names and additionally various units have been renamed for clarity. This makes it a lot easier to get started with working with the Inno Setup source code and making contributions, even with the free <a href="https://www.embarcadero.com/products/delphi/starter/free-download">Delphi Community Edition</a>.</li>
+  <li>Added official Swedish and Tamil translations.</li>
+  <li>Various tweaks and improvements.</li>
 </ul>
+
+<p>Contributions via <a href="https://github.com/jrsoftware/issrc" target="_blank">GitHub</a>: Thanks to Sergii Leonov, John Stevenson, and jogo- for their contributions!</p>
+
+<p>Thanks to Neil Hodgson and Igor Pavlov for their continued work on Scintilla and the LZMA SDK!</p>
+
+<p>Some messages have been added and changed in this version: (<a href="https://github.com/jrsoftware/issrc/commit/d18bab1c9234aa8bba6c8e277121e562724d331c">View differences in Default.isl</a>.)</p>
 <ul>
-  <li>Inno Setup Preprocessor (ISPP) changes:
+  <li><b>New messages:</b>
   <ul>
-     <li>Inno Setup Preprocessor is now always installed.</li>
-     <li>Added new predefined variable <tt>NewLine</tt>.</li>
-     <li>Added new <tt>IsWin64</tt>, <tt>SameStr</tt> and <tt>SameText</tt> support functions.</li>
+    <li>ExtractionLabel, ButtonStopExtraction, StopExtraction, ErrorExtractionAborted, ErrorExtractionFailed.</li>
   </ul>
   </li>
 </ul>
-<ul>
-  <li>Added new <i>AllPagesExample.iss</i> example script which shows all the wizard pages Setup may potentially display.</li>
-  <li>All documentation referring to the Power Users group has been removed: this group is not special anymore in Windows.</li>
-  <li>Other documentation and examples improvements.</li>
-  <li>Added official Icelandic translation.</li>
-  <li>Delphi compiler updated from Delphi 2009 to Delphi 10.3 Rio. This change increases the size of Setup but decreases development, testing and deployment times. It also makes it easier to compile Inno Setup yourself using the free Delphi Community Edition.</li>
-  <li>Minor tweaks.</li>
-</ul>
 
-<p>Contributions via <a href="https://github.com/jrsoftware/issrc" target="_blank">GitHub</a>: Thanks to jogo-, Martin Prikryl, dscharrer, Kleuter, Gavin Lambert, Stef&aacute;n &Ouml;rvar Sigmundsson, DRON, Kevin Puetz, and Sherlock Software for their contributions.</p>
+<p>Note: The official Icelandic translation has not yet been updated for these changes.</li>
 
-<p>Some messages have been added and changed in this version: (<a href="https://github.com/jrsoftware/issrc/commit/1d6d6869b225c73cde4d3e0541b87264c36f3954">View differences in Default.isl</a>).</p>
-<ul>
-  <li><b>New messages:</b> AbortRetryIgnoreSelectAction, AbortRetryIgnoreRetry, AbortRetryIgnoreIgnore, AbortRetryIgnoreCancel, ExistingFileReadOnly2, ExistingFileReadOnlyRetry, ExistingFileReadOnlyKeepExisting, FileAbortRetryIgnoreIgnoreNotRecommended, FileAbortRetryIgnoreSkipNotRecommended, PrivilegesRequiredOverrideTitle, PrivilegesRequiredOverrideInstruction, PrivilegesRequiredOverrideText1, PrivilegesRequiredOverrideText2, PrivilegesRequiredOverrideAllUsers, PrivilegesRequiredOverrideAllUsersRecommended, PrivilegesRequiredOverrideCurrentUser, PrivilegesRequiredOverrideCurrentUserRecommended, UninstallDisplayNameMark, UninstallDisplayNameMarks, UninstallDisplayNameMark32Bit, UninstallDisplayNameMark64Bit, UninstallDisplayNameMarkAllUsers, UninstallDisplayNameCurrentUser.</li>
-  <li><b>Changed message:</b> SelectLanguageLabel.</li>
-  <li><b>Removed messages:</b> EntryAbortRetryIgnore, ExistingFileReadOnly, ExistingFileReadOnlyAbortRetryIgnore, FileAbortRetryIgnore, FileAbortRetryIgnore2, MissingWOW64APIs.</li>
-</ul>
-
-<p>Note: Not all official translations have been updated for these changes at this moment. Demoted the official <a href="https://raw.github.com/jrsoftware/issrc/master/Files/Languages/Unofficial/German.isl">German</a>, <a href="https://raw.github.com/jrsoftware/issrc/master/Files/Languages/Unofficial/Nepali.islu">Nepali</a>, <a href="https://raw.github.com/jrsoftware/issrc/master/Files/Languages/Unofficial/SerbianCyrillic.isl">Serbian (Cyrillic)</a> and <a href="https://raw.github.com/jrsoftware/issrc/master/Files/Languages/Unofficial/SerbianLatin.isl">Serbian (Latin)</a> translations to unofficial because of a no longer available maintainer. To send updates yourself, see <a href="http://news.jrsoftware.org/read/article.php?id=2514&amp;group=jrsoftware.innosetup.translations#2514">this post</a> for what needs updating and use <a href="https://jrsoftware.org/files/istrans/send2.php">this form</a> to send updates (or use <a href="https://github.com/jrsoftware/issrc" target="_blank">GitHub</a>). See the <a href="https://jrsoftware.org/files/istrans/">Inno Setup Translations</a> page for more information.</li>
-
-<p><a href="https://jrsoftware.org/files/is5-whatsnew.htm">Inno Setup 5.6 Revision History</a></p>
+<p><a href="files/is6.3-whatsnew.htm">Inno Setup 6.3 Revision History</a></p>
 
 </body>
 </html>

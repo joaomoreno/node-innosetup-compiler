@@ -1,15 +1,15 @@
 {
   "name": "innosetup",
-  "version": "6.0.5",
+  "version": "6.4.1",
   "description": "Node wrapper to compile inno setup scripts (.iss)",
   "main": "lib/iscc.js",
   "bin": {
     "innosetup-compiler": "./lib/iscc"
   },
-  "homepage": "https://github.com/felicienfrancois/node-innosetup-compiler",
+  "homepage": "https://github.com/joaomoreno/node-innosetup-compiler",
   "repository": {
     "type": "git",
-    "url": "https://github.com/felicienfrancois/node-innosetup-compiler.git"
+    "url": "https://github.com/joaomoreno/node-innosetup-compiler.git"
   },
   "author": {
     "name": "Felicien Francois",
@@ -17,12 +17,12 @@
     "url": "http://tweakstyle.com"
   },
   "bugs": {
-    "url": "https://github.com/felicienfrancois/node-innosetup-compiler/issues"
+    "url": "https://github.com/joaomoreno/node-innosetup-compiler/issues"
   },
   "licenses": [
     {
       "type": "Open Source",
-      "url": "https://github.com/felicienfrancois/node-innosetup-compiler/blob/master/LICENSE"
+      "url": "https://github.com/joaomoreno/node-innosetup-compiler/blob/master/LICENSE"
     }
   ],
   "engines": {
