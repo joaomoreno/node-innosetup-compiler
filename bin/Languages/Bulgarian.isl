@@ -1,4 +1,4 @@
-﻿; *** Inno Setup version 6.4.0+ Bulgarian messages ***
+; *** Inno Setup version 6.5.0+ Bulgarian messages ***
 ; Ventsislav Dimitrov <nightravenanm@protonmail.com>
 ;
 ; За да изтеглите преводи на този файл, предоставени от потребители, посетете:
@@ -18,13 +18,11 @@ LanguageCodePage=1251
 ; шрифта, извадете от коментар съответните записи по-долу и ги променете
 ; според вашите нужди.
 ;DialogFontName=
-;DialogFontSize=8
-;WelcomeFontName=Verdana
-;WelcomeFontSize=12
-;TitleFontName=Arial
-;TitleFontSize=29
-;CopyrightFontName=Arial
-;CopyrightFontSize=8
+;DialogFontSize=9
+;DialogFontBaseScaleWidth=7
+;DialogFontBaseScaleHeight=15
+;WelcomeFontName=Segoe UI
+;WelcomeFontSize=14
 
 [Messages]
 
@@ -60,8 +58,8 @@ WinVersionTooLowError=Програмата изисква %1 версия %2 и�
 WinVersionTooHighError=Програмата не може да бъде инсталирана в %1 версия %2 или по-нова.
 AdminPrivilegesRequired=За да инсталирате програмата, трябва да влезете като администратор.
 PowerUserPrivilegesRequired=За да инсталирате програмата, трябва да влезете като администратор или потребител с разширени права.
-SetupAppRunningError=Инсталаторът установи, че %1 се изпълнява в момента.%n%nМоля, затворете всички копия на програмата и натиснете "OK", за да продължите, или "Cancel" за изход.
-UninstallAppRunningError=Деинсталаторът установи, че %1 се изпълнява в момента.%n%nМоля, затворете всички копия на програмата и натиснете "OK", за да продължите, или "Cancel" за изход.
+SetupAppRunningError=Инсталаторът установи, че %1 се изпълнява в момента.%n%nМоля, затворете всички копия на програмата и натиснете "OK", за да продължите, или "Отказ" за изход.
+UninstallAppRunningError=Деинсталаторът установи, че %1 се изпълнява в момента.%n%nМоля, затворете всички копия на програмата и натиснете "OK", за да продължите, или "Отказ" за изход.
 
 ; *** Въпроси при стартиране
 PrivilegesRequiredOverrideTitle=Избор на режим на инсталация
@@ -176,7 +174,7 @@ FullInstallation=Пълна инсталация
 CompactInstallation=Компактна инсталация
 CustomInstallation=Инсталация по избор
 NoUninstallWarningTitle=Компонентите съществуват
-NoUninstallWarning=Инсталаторът установи, че следните компоненти са вече инсталирани в компютърa:%n%n%1%n%nОтказването на тези компоненти няма да ги деинсталира.%n%nЖелаете ли все пак да продължите?
+NoUninstallWarning=Инсталаторът установи, че следните компоненти са вече инсталирани в компютъра:%n%n%1%n%nОтказването на тези компоненти няма да ги деинсталира.%n%nЖелаете ли все пак да продължите?
 ComponentSize1=%1 кБ
 ComponentSize2=%1 МБ
 ComponentsDiskSpaceGBLabel=Направеният избор изисква поне [gb] ГБ дисково пространство.
@@ -211,23 +209,26 @@ ReadyMemoGroup=Папка в менюто "Старт":
 ReadyMemoTasks=Допълнителни задачи:
 
 ; *** Страница "TDownloadWizardPage" на съветника и DownloadTemporaryFile
-DownloadingLabel=Изтегляне на допълнителни файлове...
+DownloadingLabel2=Изтегляне на файлове...
 ButtonStopDownload=&Спри изтеглянето
 StopDownload=Сигурни ли сте, че искате да спрете изтеглянето?
 ErrorDownloadAborted=Изтеглянето беше прекъснато
 ErrorDownloadFailed=Изтеглянето беше неуспешно: %1 %2
 ErrorDownloadSizeFailed=Неуспешно получаване на размер: %1 %2
-ErrorFileHash1=Неуспешна контролна сума на файл: %1
-ErrorFileHash2=Невалидна контролна сума на файл: очаквана %1, открита %2
-ErrorProgress=Невалиден напредък: %1 of %2
+ErrorProgress=Невалиден напредък: %1 от %2
 ErrorFileSize=Невалиден размер на файл: очакван %1, открит %2
 
-; *** Страница "TExtractionWizardPage" на съветника и Extract7ZipArchive
-ExtractionLabel=Извличане на допълнителни файлове...
+; *** Страница "TExtractionWizardPage" на съветника и ExtractArchive
+ExtractingLabel=Извличане на файлове...
 ButtonStopExtraction=&Спри извличането
 StopExtraction=Сигурни ли сте, че искате да спрете извличането?
 ErrorExtractionAborted=Прекратено извличане
 ErrorExtractionFailed=Извличането беше неуспешно: %1
+
+; *** Повече информация за неуспешно извличане от архив
+ArchiveIncorrectPassword=Паролата е неправилна
+ArchiveIsCorrupted=Архивът е повреден
+ArchiveUnsupportedFormat=Форматът на архива не се поддържа
 
 ; *** Страница "Подготовка за инсталиране" на съветника
 WizardPreparing=Подготовка за инсталиране
@@ -239,7 +240,7 @@ ApplicationsFound2=Следните приложения използват фа
 CloseApplications=Приложенията да се затворят &автоматично
 DontCloseApplications=Приложенията да &не се затварят
 ErrorCloseApplications=Не бе възможно да се затворят автоматично всички приложения. Препоръчва се преди да продължите, да затворите всички приложения, използващи файлове, които инсталаторът трябва да обнови.
-PrepareToInstallNeedsRestart=Инсталаторът трябва да ресартира Вашия компютър. След рестартирането, стартирайте инсталатора отново, за да завършите инсталацията на [name].%n%nЖелаете ли да рестартирате сега?
+PrepareToInstallNeedsRestart=Инсталаторът трябва да рестартира Вашия компютър. След рестартирането, стартирайте инсталатора отново, за да завършите инсталацията на [name].%n%nЖелаете ли да рестартирате сега?
 
 ; *** Страница "Инсталиране" на съветника
 WizardInstalling=Инсталиране
@@ -262,7 +263,7 @@ RunEntryShellExec=Преглеждане на %1
 
 ; *** Текстове от рода на "Инсталаторът изисква следващ носител"
 ChangeDiskTitle=Инсталаторът изисква следващ носител
-SelectDiskLabel2=Моля, поставете носител %1 и натиснете "ОК".%n%nАко файловете от носителя се намират в различна от показаната по-долу папка, въведете правилния път до тях или натиснете "Преглед".
+SelectDiskLabel2=Моля, поставете носител %1 и натиснете "OK".%n%nАко файловете от носителя се намират в различна от показаната по-долу папка, въведете правилния път до тях или натиснете "Преглед".
 PathLabel=П&ът:
 FileNotInDir2=Файлът "%1" не бе намерен в "%2". Моля, поставете правилния носител или изберете друга папка.
 SelectDirectoryLabel=Моля, посочете местоположението на следващия носител.
@@ -273,11 +274,15 @@ AbortRetryIgnoreSelectAction=Изберете действие
 AbortRetryIgnoreRetry=Повторен &опит
 AbortRetryIgnoreIgnore=&Пренебрегни грешката и продължи
 AbortRetryIgnoreCancel=Прекрати инсталацията
+RetryCancelSelectAction=Изберете действие
+RetryCancelRetry=&Повторен опит
+RetryCancelCancel=Отказ
 
 ; *** Съобщения за хода на инсталирането
 StatusClosingApplications=Затварят се приложения...
 StatusCreateDirs=Създават се директории...
 StatusExtractFiles=Извличат се файлове...
+StatusDownloadFiles=Изтеглят се файлове...
 StatusCreateIcons=Създават се преки пътища...
 StatusCreateIniEntries=Създават се записи в INI файл...
 StatusCreateRegistryEntries=Създават се записи в регистъра...
@@ -305,8 +310,16 @@ ErrorIniEntry=Грешка при създаване на INI запис във 
 ; *** Грешки при копиране на файлове
 FileAbortRetryIgnoreSkipNotRecommended=Прескочи този &файл (не се препоръчва)
 FileAbortRetryIgnoreIgnoreNotRecommended=&Пренебрегни грешката и продължи (не се препоръчва)
-SourceIsCorrupted=Файлът - източник е повреден
-SourceDoesntExist=Файлът - източник "%1" не съществува
+SourceIsCorrupted=Файлът източник е повреден
+SourceDoesntExist=Файлът източник "%1" не съществува
+SourceVerificationFailed=Проверката на файла източник беше неуспешна: %1
+VerificationSignatureDoesntExist=Файлът с подписи "%1" не съществува
+VerificationSignatureInvalid=Файлът с подписи "%1" е невалиден
+VerificationKeyNotFound=Файлът с подписи "%1" използва неизвестен ключ
+VerificationFileNameIncorrect=Името на файла е неправилно
+VerificationFileTagIncorrect=Етикетът на файла е неправилен
+VerificationFileSizeIncorrect=Размерът на файла е неправилен
+VerificationFileHashIncorrect=Контролната сума на файла е неправилна
 ExistingFileReadOnly2=Съществуващият файл не беше заменен, защото е маркиран само за четене.
 ExistingFileReadOnlyRetry=&Премахни атрибута „само за четене“ и опитай отново
 ExistingFileReadOnlyKeepExisting=&Запази съществуващия файл
@@ -325,6 +338,8 @@ ErrorChangingAttr=Грешка при опит за смяна на атрибу
 ErrorCreatingTemp=Грешка при опит за създаване на файл в целевата директория:
 ErrorReadingSource=Грешка при опит за четене на файл - източник:
 ErrorCopying=Грешка при опит за копиране на файл:
+ErrorDownloading=Грешка при опит за изтегляне на файл:
+ErrorExtracting=Грешка при опит за извличане от архив:
 ErrorReplacingExistingFile=Грешка при опит за заместване на съществуващ файл:
 ErrorRestartReplace=Неуспешно отложено заместване:
 ErrorRenamingTemp=Грешка при опит за преименуване на файл в целевата директория:

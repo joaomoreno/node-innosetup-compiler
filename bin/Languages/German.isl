@@ -1,6 +1,6 @@
-﻿; ******************************************************
+; ******************************************************
 ; ***                                                ***
-; *** Inno Setup version 6.4.0+ German messages      ***
+; *** Inno Setup version 6.5.0+ German messages      ***
 ; ***                                                ***
 ; *** Changes 6.0.0+ Author:                         ***
 ; ***                                                ***
@@ -38,13 +38,11 @@ LanguageCodePage=1252
 ; If the language you are translating to requires special font faces or
 ; sizes, uncomment any of the following entries and change them accordingly.
 ;DialogFontName=
-;DialogFontSize=8
-;WelcomeFontName=Verdana
-;WelcomeFontSize=12
-;TitleFontName=Arial
-;TitleFontSize=29
-;CopyrightFontName=Arial
-;CopyrightFontSize=8
+;DialogFontSize=9
+;DialogFontBaseScaleWidth=7
+;DialogFontBaseScaleHeight=15
+;WelcomeFontName=Segoe UI
+;WelcomeFontSize=14
 
 [Messages]
 
@@ -95,8 +93,8 @@ PrivilegesRequiredOverrideCurrentUser=Installation nur für &Sie
 PrivilegesRequiredOverrideCurrentUserRecommended=Installation nur für &Sie (empfohlen)
 
 ; *** Misc. errors
-ErrorCreatingDir=Das Setup konnte den Ordner "%1" nicht erstellen.
-ErrorTooManyFilesInDir=Das Setup konnte eine Datei im Ordner "%1" nicht erstellen, weil er zu viele Dateien enthält.
+ErrorCreatingDir=Das Setup konnte den Ordner "%1" nicht erstellen
+ErrorTooManyFilesInDir=Das Setup konnte eine Datei im Ordner "%1" nicht erstellen, weil er zu viele Dateien enthält
 
 ; *** Setup common messages
 ExitSetupTitle=Setup verlassen
@@ -184,7 +182,7 @@ DirNameTooLong=Der Ordnername/Pfad ist zu lang.
 InvalidDirName=Der Ordnername ist nicht gültig.
 BadDirName32=Ordnernamen dürfen keine der folgenden Zeichen enthalten:%n%n%1
 DirExistsTitle=Ordner existiert bereits
-DirExists=Der Ordner:%n%n%1%n%n existiert bereits. Möchten Sie trotzdem in diesen Ordner installieren?
+DirExists=Der Ordner:%n%n%1%n%nexistiert bereits. Möchten Sie trotzdem in diesen Ordner installieren?
 DirDoesntExistTitle=Ordner ist nicht vorhanden
 DirDoesntExist=Der Ordner:%n%n%1%n%nist nicht vorhanden. Soll der Ordner erstellt werden?
 
@@ -220,7 +218,7 @@ BadGroupName=Der Ordnername darf keine der folgenden Zeichen enthalten:%n%n%1
 NoProgramGroupCheck2=&Keinen Ordner im Startmenü erstellen
 
 ; *** "Ready to Install" wizard page
-WizardReady=Bereit zur Installation.
+WizardReady=Bereit zur Installation
 ReadyLabel1=Das Setup ist jetzt bereit, [name] auf Ihrem Computer zu installieren.
 ReadyLabel2a=Klicken Sie auf "Installieren", um mit der Installation zu beginnen, oder auf "Zurück", um Ihre Einstellungen zu überprüfen oder zu ändern.
 ReadyLabel2b=Klicken Sie auf "Installieren", um mit der Installation zu beginnen.
@@ -232,23 +230,26 @@ ReadyMemoGroup=Startmenü-Ordner:
 ReadyMemoTasks=Zusätzliche Aufgaben:
 
 ; *** TDownloadWizardPage wizard page and DownloadTemporaryFile
-DownloadingLabel=Lade zusätzliche Dateien herunter...
+DownloadingLabel2=Lade Dateien herunter...
 ButtonStopDownload=Download &abbrechen
 StopDownload=Sind Sie sicher, dass Sie den Download abbrechen wollen?
 ErrorDownloadAborted=Download abgebrochen
 ErrorDownloadFailed=Download fehlgeschlagen: %1 %2
 ErrorDownloadSizeFailed=Fehler beim Ermitteln der Größe: %1 %2
-ErrorFileHash1=Fehler beim Ermitteln der Datei-Prüfsumme: %1
-ErrorFileHash2=Ungültige Datei-Prüfsumme: erwartet %1, gefunden %2
 ErrorProgress=Ungültiger Fortschritt: %1 von %2
 ErrorFileSize=Ungültige Dateigröße: erwartet %1, gefunden %2
 
-; *** TExtractionWizardPage wizard page and Extract7ZipArchive
-ExtractionLabel=Entpacke zusätzliche Dateien...
+; *** TExtractionWizardPage wizard page and ExtractArchive
+ExtractingLabel=Entpacke Dateien...
 ButtonStopExtraction=Entpacken &abbrechen
 StopExtraction=Sind Sie sicher, dass Sie das Entpacken abbrechen wollen?
 ErrorExtractionAborted=Entpacken abgebrochen
 ErrorExtractionFailed=Entpacken fehlgeschlagen: %1
+
+; *** Archive extraction failure details
+ArchiveIncorrectPassword=Ungültiges Passwort
+ArchiveIsCorrupted=Das Archiv ist defekt
+ArchiveUnsupportedFormat=Das Archivformat wird nicht unterstützt
 
 ; *** "Preparing to Install" wizard page
 WizardPreparing=Vorbereitung der Installation
@@ -259,11 +260,11 @@ ApplicationsFound=Die folgenden Anwendungen benutzen Dateien, die aktualisiert w
 ApplicationsFound2=Die folgenden Anwendungen benutzen Dateien, die aktualisiert werden müssen. Es wird empfohlen, Setup zu erlauben, diese Anwendungen zu schließen. Nachdem die Installation fertiggestellt wurde, versucht Setup, diese Anwendungen wieder zu starten.
 CloseApplications=&Schließe die Anwendungen automatisch
 DontCloseApplications=Schließe die A&nwendungen nicht
-ErrorCloseApplications=Das Setup konnte nicht alle Anwendungen automatisch schließen. Es wird empfohlen, alle Anwendungen zu schließen, die Dateien benutzen, die vom Setup vor einer Fortsetzung aktualisiert werden müssen.  
-PrepareToInstallNeedsRestart=Das Setup muss Ihren Computer neu starten. Führen Sie nach dem Neustart Setup erneut aus, um die Installation von [name] abzuschließen.%n%nWollen Sie jetzt neu starten? 
+ErrorCloseApplications=Das Setup konnte nicht alle Anwendungen automatisch schließen. Es wird empfohlen, alle Anwendungen zu schließen, die Dateien benutzen, die vom Setup vor einer Fortsetzung aktualisiert werden müssen.
+PrepareToInstallNeedsRestart=Das Setup muss Ihren Computer neu starten. Führen Sie nach dem Neustart Setup erneut aus, um die Installation von [name] abzuschließen.%n%nWollen Sie jetzt neu starten?
 
 ; *** "Installing" wizard page
-WizardInstalling=Installiere ...
+WizardInstalling=Installiere
 InstallingLabel=Warten Sie bitte, während [name] auf Ihrem Computer installiert wird.
 
 ; *** "Setup Completed" wizard page
@@ -294,11 +295,15 @@ AbortRetryIgnoreSelectAction=Bitte auswählen
 AbortRetryIgnoreRetry=&Nochmals versuchen
 AbortRetryIgnoreIgnore=&Den Fehler ignorieren und fortfahren
 AbortRetryIgnoreCancel=Installation abbrechen
+RetryCancelSelectAction=Bitte auswählen
+RetryCancelRetry=&Wiederholen
+RetryCancelCancel=Abbrechen
 
 ; *** Installation status messages
 StatusClosingApplications=Anwendungen werden geschlossen ...
 StatusCreateDirs=Ordner werden erstellt ...
 StatusExtractFiles=Dateien werden entpackt ...
+StatusDownloadFiles=Dateien werden heruntergeladen ...
 StatusCreateIcons=Verknüpfungen werden erstellt ...
 StatusCreateIniEntries=INI-Einträge werden erstellt ...
 StatusCreateRegistryEntries=Registry-Einträge werden erstellt ...
@@ -328,6 +333,14 @@ FileAbortRetryIgnoreSkipNotRecommended=Diese Datei &überspringen (nicht empfohl
 FileAbortRetryIgnoreIgnoreNotRecommended=Den Fehler &ignorieren und fortfahren (nicht empfohlen)
 SourceIsCorrupted=Die Quelldatei ist beschädigt
 SourceDoesntExist=Die Quelldatei "%1" existiert nicht
+SourceVerificationFailed=Überprüfung der Quelldatei fehlgeschlagen: %1
+VerificationSignatureDoesntExist=Die Signaturdatei "%1" existiert nicht
+VerificationSignatureInvalid=Die Signaturdatei "%1" ist ungültig
+VerificationKeyNotFound=Die Signaturdatei "%1" verwendet einen unbekannten Schlüssel
+VerificationFileNameIncorrect=Der Name der Datei ist ungültig
+VerificationFileTagIncorrect=Der Tag der Datei ist ungültig
+VerificationFileSizeIncorrect=Die Größe der Datei ist ungültig
+VerificationFileHashIncorrect=Der Hashwert der Datei ist ungültig
 ExistingFileReadOnly2=Die vorhandene Datei kann nicht ersetzt werden, da sie schreibgeschützt ist.
 ExistingFileReadOnlyRetry=&Den Schreibschutz entfernen und noch einmal versuchen
 ExistingFileReadOnlyKeepExisting=Die &vorhandene Datei behalten
@@ -346,6 +359,8 @@ ErrorChangingAttr=Fehler beim Ändern der Datei-Attribute:
 ErrorCreatingTemp=Fehler beim Erstellen einer Datei im Ziel-Ordner:
 ErrorReadingSource=Fehler beim Lesen der Quelldatei:
 ErrorCopying=Fehler beim Kopieren einer Datei:
+ErrorDownloading=Beim Download der Datei ist ein Fehler aufgetreten:
+ErrorExtracting=Beim Entpacken eines Archivs ist ein Fehler aufgetreten:
 ErrorReplacingExistingFile=Fehler beim Ersetzen einer vorhandenen Datei:
 ErrorRestartReplace="Ersetzen nach Neustart" fehlgeschlagen:
 ErrorRenamingTemp=Fehler beim Umbenennen einer Datei im Ziel-Ordner:
@@ -369,9 +384,9 @@ ErrorRestartingComputer=Das Setup konnte den Computer nicht neu starten. Bitte f
 
 ; *** Uninstaller messages
 UninstallNotFound=Die Datei "%1" existiert nicht. Entfernen der Anwendung fehlgeschlagen.
-UninstallOpenError=Die Datei "%1" konnte nicht geöffnet werden. Entfernen der Anwendung fehlgeschlagen.
-UninstallUnsupportedVer=Das Format der Deinstallationsdatei "%1" konnte nicht erkannt werden. Entfernen der Anwendung fehlgeschlagen.
-UninstallUnknownEntry=In der Deinstallationsdatei wurde ein unbekannter Eintrag (%1) gefunden.
+UninstallOpenError=Die Datei "%1" konnte nicht geöffnet werden. Entfernen der Anwendung fehlgeschlagen
+UninstallUnsupportedVer=Das Format der Deinstallationsdatei "%1" konnte nicht erkannt werden. Entfernen der Anwendung fehlgeschlagen
+UninstallUnknownEntry=In der Deinstallationsdatei wurde ein unbekannter Eintrag (%1) gefunden
 ConfirmUninstall=Sind Sie sicher, dass Sie %1 und alle zugehörigen Komponenten entfernen möchten?
 UninstallOnlyOnWin64=Diese Installation kann nur unter 64-Bit-Windows-Versionen entfernt werden.
 OnlyAdminCanUninstall=Diese Installation kann nur von einem Benutzer mit Administrator-Rechten entfernt werden.
@@ -379,11 +394,11 @@ UninstallStatusLabel=Warten Sie bitte, während %1 von Ihrem Computer entfernt w
 UninstalledAll=%1 wurde erfolgreich von Ihrem Computer entfernt.
 UninstalledMost=Entfernen von %1 beendet.%n%nEinige Komponenten konnten nicht entfernt werden. Diese können von Ihnen manuell gelöscht werden.
 UninstalledAndNeedsRestart=Um die Deinstallation von %1 abzuschließen, muss Ihr Computer neu gestartet werden.%n%nMöchten Sie jetzt neu starten?
-UninstallDataCorrupted="%1"-Datei ist beschädigt. Entfernen der Anwendung fehlgeschlagen.
+UninstallDataCorrupted="%1"-Datei ist beschädigt. Entfernen der Anwendung fehlgeschlagen
 
 ; *** Uninstallation phase messages
 ConfirmDeleteSharedFileTitle=Gemeinsame Datei entfernen?
-ConfirmDeleteSharedFile2=Das System zeigt an, dass die folgende gemeinsame Datei von keinem anderen Programm mehr benutzt wird. Möchten Sie diese Datei entfernen lassen?%nSollte es doch noch Programme geben, die diese Datei benutzen und sie wird entfernt, funktionieren diese Programme vielleicht nicht mehr richtig. Wenn Sie unsicher sind, wählen Sie "Nein", um die Datei im System zu belassen. Es schadet Ihrem System nicht, wenn Sie die Datei behalten.
+ConfirmDeleteSharedFile2=Das System zeigt an, dass die folgende gemeinsame Datei von keinem anderen Programm mehr benutzt wird. Möchten Sie diese Datei entfernen lassen?%n%nSollte es doch noch Programme geben, die diese Datei benutzen und sie wird entfernt, funktionieren diese Programme vielleicht nicht mehr richtig. Wenn Sie unsicher sind, wählen Sie "Nein", um die Datei im System zu belassen. Es schadet Ihrem System nicht, wenn Sie die Datei behalten.
 SharedFileNameLabel=Dateiname:
 SharedFileLocationLabel=Ordner:
 WizardUninstalling=Entfernen (Status)

@@ -89,7 +89,7 @@ Print full log output
 #### options.gui
 Default: `false`
 
-Use Compil32.exe instead or ISCC.exe (GUI mode)
+Use ISIDE.exe (the Compiler IDE) instead of ISCC.exe (GUI mode)
 
 all other options are ignored in this case
 

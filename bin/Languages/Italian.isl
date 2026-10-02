@@ -1,5 +1,5 @@
 ; bovirus@gmail.com
-; *** Inno Setup version 6.4.0+ Italian messages ***
+; *** Inno Setup version 6.5.0+ Italian messages ***
 ;
 ; To download user-contributed translations of this file, go to:
 ;    https://jrsoftware.org/files/istrans/
@@ -9,7 +9,7 @@
 ; Setup adds the periods automatically (appending a period would result in
 ; two periods being displayed).
 ;
-; Italian.isl - Last Update: 25.11.2024  by bovirus (bovirus@gmail.com)
+; Italian.isl - Last Update: 28.07.2026 by bovirus (bovirus@gmail.com)
 ;
 ; Translator name:   bovirus
 ; Translator e-mail: bovirus@gmail.com
@@ -20,17 +20,17 @@
 ; understand the '[LangOptions] section' topic in the help file.
 LanguageName=Italiano
 LanguageID=$0410
+; LanguageCodePage should always be set if possible, even if this file is Unicode
+; For English it's set to zero anyway because English only uses ASCII characters
 LanguageCodePage=1252
 ; If the language you are translating to requires special font faces or
 ; sizes, uncomment any of the following entries and change them accordingly.
 ;DialogFontName=
-;DialogFontSize=8
-;WelcomeFontName=Verdana
-;WelcomeFontSize=12
-;TitleFontName=Arial
-;TitleFontSize=29
-;CopyrightFontName=Arial
-;CopyrightFontSize=8
+;DialogFontSize=9
+;DialogFontBaseScaleWidth=7
+;DialogFontBaseScaleHeight=15
+;WelcomeFontName=Segoe UI
+;WelcomeFontSize=14
 
 [Messages]
 
@@ -46,7 +46,7 @@ ConfirmTitle=Conferma
 ErrorTitle=Errore
 
 ; *** SetupLdr messages
-SetupLdrStartupMessage=Questa è l'installazione di %1.%n%nVuoi continuare?
+SetupLdrStartupMessage=Installazione di %1.%n%nVuoi continuare?
 LdrCannotCreateTemp=Impossibile creare un file temporaneo.%n%nInstallazione annullata.
 LdrCannotExecTemp=Impossibile eseguire un file nella cartella temporanea.%n%nInstallazione annullata.
 HelpTextNote=
@@ -67,8 +67,8 @@ WinVersionTooLowError=Questo programma richiede %1 versione %2 o successiva.
 WinVersionTooHighError=Questo programma non può essere installato su %1 versione %2 o successiva.
 AdminPrivilegesRequired=Per installare questo programma sono richiesti privilegi di amministratore.
 PowerUserPrivilegesRequired=Per poter installare questo programma sono richiesti i privilegi di amministratore o di Power Users.
-SetupAppRunningError=%1 è attualmente in esecuzione.%n%nChiudi adesso tutte le istanze del programma e poi seleziona "OK", o seleziona "Annulla" per uscire.
-UninstallAppRunningError=%1 è attualmente in esecuzione.%n%nChiudi adesso tutte le istanze del programma e poi seleziona "OK", o seleziona "Annulla" per uscire.
+SetupAppRunningError=L'installazione ha rilevato che %1 è attualmente in esecuzione.%n%nChiudi adesso tutte le istanze del programma e poi seleziona "OK" per continuare o "Annulla" per uscire.
+UninstallAppRunningError=La disinstallazione ha rilevato che %1 è attualmente in esecuzione.%n%nChiudi adesso tutte le istanze del programma e poi seleziona "OK" per continuare o "Annulla" per uscire.
 
 ; *** Startup questions
 PrivilegesRequiredOverrideTitle=Seleziona modo installazione
@@ -82,16 +82,16 @@ PrivilegesRequiredOverrideCurrentUserRecommended=Installa solo per l'&utente att
 
 ; *** Misc. errors
 ErrorCreatingDir=Impossibile creare la cartella "%1"
-ErrorTooManyFilesInDir=Impossibile creare i file nella cartella "%1" perché contiene troppi file.
+ErrorTooManyFilesInDir=Impossibile creare un file nella cartella "%1" perché contiene troppi file
 
 ; *** Setup common messages
 ExitSetupTitle=Uscita dall'installazione
-ExitSetupMessage=L'installazione non è completa.%n%nUscendo dall'installazione in questo momento, il programma non sarà installato.%n%nÈ possibile eseguire l'installazione in un secondo tempo.%n%nVuoi uscire dall'installazione?
+ExitSetupMessage=L'installazione non è stata completata.%n%nUscendo dall'installazione in questo momento, il programma non sarà installato.%n%nÈ possibile eseguire l'installazione in un secondo tempo.%n%nVuoi uscire dall'installazione?
 AboutSetupMenuItem=&Informazioni sull'installazione...
 AboutSetupTitle=Informazioni sull'installazione
-AboutSetupMessage=%1 versione %2%n%3%n%n%1 sito web:%n%4
+AboutSetupMessage=%1 %2%n%3%n%n%1 sito web:%n%4
 AboutSetupNote=
-TranslatorNote=Traduzione italiana a cura di Rinaldo M. aka Whiteshark e bovirus (v. 25.11.2024)
+TranslatorNote=Traduzione italiana (v. 28.07.2026) a cura di Rinaldo M. aka Whiteshark e bovirus
 
 ; *** Buttons
 ButtonBack=< &Indietro
@@ -99,7 +99,7 @@ ButtonNext=&Avanti >
 ButtonInstall=Inst&alla
 ButtonOK=OK
 ButtonCancel=Annulla
-ButtonYes=&Si
+ButtonYes=&Sì
 ButtonYesToAll=Sì a &tutto
 ButtonNo=&No
 ButtonNoToAll=N&o a tutto
@@ -113,7 +113,7 @@ SelectLanguageTitle=Seleziona la lingua dell'installazione
 SelectLanguageLabel=Seleziona la lingua da usare durante l'installazione.
 
 ; *** Common wizard text
-ClickNext=Seleziona "Avanti" per continuare, o "Annulla" per uscire.
+ClickNext=Per continuare seleziona "Avanti" o "Annulla" per uscire.
 BeveledLabel=
 BrowseDialogTitle=Sfoglia cartelle
 BrowseDialogLabel=Seleziona una cartella nell'elenco, e quindi seleziona "OK".
@@ -121,7 +121,7 @@ NewFolderName=Nuova cartella
 
 ; *** "Welcome" wizard page
 WelcomeLabel1=Installazione di [name]
-WelcomeLabel2=[name/ver] sarà installato sul computer.%n%nPrima di procedere chiudi tutte le applicazioni attive.
+WelcomeLabel2=Il programma installerà [name/ver] sul computer.%n%nPrima di procedere chiudi tutte le applicazioni attive.
 
 ; *** "Password" wizard page
 WizardPassword=Password
@@ -134,16 +134,16 @@ IncorrectPassword=La password inserita non è corretta. Riprova.
 WizardLicense=Contratto di licenza
 LicenseLabel=Prima di procedere leggi con attenzione le informazioni che seguono.
 LicenseLabel3=Leggi il seguente contratto di licenza.%nPer procedere con l'installazione è necessario accettare tutti i termini del contratto.
-LicenseAccepted=Accetto i termini del &contratto di licenza 
+LicenseAccepted=Accetto i termini del &contratto di licenza
 LicenseNotAccepted=&Non accetto i termini del contratto di licenza
 
 ; *** "Information" wizard pages
 WizardInfoBefore=Informazioni
 InfoBeforeLabel=Prima di procedere leggi le importanti informazioni che seguono.
-InfoBeforeClickLabel=Quando sei pronto per proseguire, seleziona "Avanti".
+InfoBeforeClickLabel=Quando sei pronto per proseguire seleziona "Avanti".
 WizardInfoAfter=Informazioni
 InfoAfterLabel=Prima di procedere leggi le importanti informazioni che seguono.
-InfoAfterClickLabel=Quando sei pronto per proseguire, seleziona "Avanti".
+InfoAfterClickLabel=Quando sei pronto per proseguire seleziona "Avanti".
 
 ; *** "User Information" wizard page
 WizardUserInfo=Informazioni utente
@@ -163,16 +163,16 @@ DiskSpaceMBLabel=Sono richiesti almeno [mb] MB di spazio libero nel disco.
 CannotInstallToNetworkDrive=Non è possibile effettuare l'installazione in un disco in rete.
 CannotInstallToUNCPath=Non è possibile effettuare l'installazione in un percorso UNC.
 InvalidPath=Va inserito un percorso completo di lettera di unità; per esempio:%n%nC:\APP%n%no un percorso di rete nella forma:%n%n\\server\condivisione
-InvalidDrive=L'unità o il percorso di rete selezionato non esiste o non è accessibile.%n%nSelezionane un altro.
+InvalidDrive=L'unità o il percorso di rete selezionato non esiste o non è accessibile.%n%nSeleziona un'altra unità o percorso.
 DiskSpaceWarningTitle=Spazio su disco insufficiente
 DiskSpaceWarning=L'installazione richiede per eseguire l'installazione almeno %1 KB di spazio libero, ma l'unità selezionata ha solo %2 KB disponibili.%n%nVuoi continuare comunque?
 DirNameTooLong=Il nome della cartella o il percorso sono troppo lunghi.
 InvalidDirName=Il nome della cartella non è valido.
 BadDirName32=Il nome della cartella non può includere nessuno dei seguenti caratteri:%n%n%1
 DirExistsTitle=Cartella già esistente
-DirExists=La cartella%n%n  %1%n%nesiste già.%n%nVuoi comunque installare l'applicazione in questa cartella?
+DirExists=La cartella%n%n%1%n%nesiste già.%n%nVuoi comunque installare l'applicazione in questa cartella?
 DirDoesntExistTitle=Cartella inesistente
-DirDoesntExist=La cartella%n%n  %1%n%nnon esiste. Vuoi creare la cartella?
+DirDoesntExist=La cartella%n%n%1%n%nnon esiste. Vuoi creare la cartella?
 
 ; *** "Select Components" wizard page
 WizardSelectComponents=Selezione componenti
@@ -183,7 +183,7 @@ FullInstallation=Installazione completa
 CompactInstallation=Installazione compatta
 CustomInstallation=Installazione personalizzata
 NoUninstallWarningTitle=Componente esistente
-NoUninstallWarning=I seguenti componenti sono già installati nel computer:%n%n%1%n%nDeselezionando questi componenti essi non verranno rimossi.%n%nVuoi continuare comunque?
+NoUninstallWarning=L'installazione ha rilevato che sono già installati nel computer i seguenti componenti:%n%n%1%n%nDeselezionando questi componenti essi non verranno rimossi.%n%nVuoi continuare comunque?
 ComponentSize1=%1 KB
 ComponentSize2=%1 MB
 ComponentsDiskSpaceGBLabel=La selezione attuale richiede almeno [gb] GB di spazio nel disco.
@@ -208,7 +208,7 @@ NoProgramGroupCheck2=&Non creare una cartella nel menu Avvio/Start
 ; *** "Ready to Install" wizard page
 WizardReady=Pronto per l'installazione
 ReadyLabel1=Il programma è pronto per iniziare l'installazione di [name] nel computer.
-ReadyLabel2a=Seleziona "Installa" per continuare con l'installazione, o "Indietro" per rivedere o modificare le impostazioni.
+ReadyLabel2a=Per continuare con l'installazione seleziona "Installa" o "Indietro" per rivedere o modificare le impostazioni.
 ReadyLabel2b=Per procedere con l'installazione seleziona "Installa".
 ReadyMemoUserInfo=Informazioni utente:
 ReadyMemoDir=Cartella di installazione:
@@ -218,35 +218,38 @@ ReadyMemoGroup=Cartella del menu Avvio/Start:
 ReadyMemoTasks=Processi aggiuntivi:
 
 ; *** TDownloadWizardPage wizard page and DownloadTemporaryFile
-DownloadingLabel=Download file aggiuntivi...
+DownloadingLabel2=Download file...
 ButtonStopDownload=&Stop download
 StopDownload=Sei sicuro di voler interrompere il download?
 ErrorDownloadAborted=Download annullato
 ErrorDownloadFailed=Download fallito: %1 %2
 ErrorDownloadSizeFailed=Rilevamento dimensione fallito: %1 %2
-ErrorFileHash1=Errore hash file: %1
-ErrorFileHash2=Hash file non valido: atteso %1, trovato %2
 ErrorProgress=Progresso non valido: %1 di %2
 ErrorFileSize=Dimensione file non valida: attesa %1, trovata %2
 
-; *** TExtractionWizardPage wizard page and Extract7ZipArchive
-ExtractionLabel=Estrazione file aggiuntivi...
+; *** TExtractionWizardPage wizard page and ExtractArchive
+ExtractingLabel=Estrazione file...
 ButtonStopExtraction=Interrompi e&strazione
 StopExtraction=Sei sicuro di voler interrompere l'estrazione?
 ErrorExtractionAborted=Estrazione interrotta
 ErrorExtractionFailed=Estrazione fallita: %1
 
+; *** Archive extraction failure details
+ArchiveIncorrectPassword=La password non è corretta
+ArchiveIsCorrupted=L'archivio non è integro
+ArchiveUnsupportedFormat=Questo formato archivio non è supportato
+
 ; *** "Preparing to Install" wizard page
 WizardPreparing=Preparazione all'installazione
 PreparingDesc=Preparazione all'installazione di [name] nel computer.
-PreviousInstallNotCompleted=L'installazione/rimozione precedente del programma non è stata completata.%n%nÈ necessario riavviare il sistema per completare l'installazione.%n%nDopo il riavvio del sistema esegui di nuovo l'installazione di [name].
-CannotContinue=L'installazione non può continuare. Seleziona "Annulla" per uscire.
+PreviousInstallNotCompleted=L'installazione/rimozione precedente del programma non è stata completata.%n%nPer completare l'installazione è necessario riavviare il sistema.%n%nDopo il riavvio del sistema esegui di nuovo l'installazione di [name].
+CannotContinue=L'installazione non può continuare. Per uscire seleziona "Annulla".
 ApplicationsFound=Le seguenti applicazioni stanno usando file che devono essere aggiornati dall'installazione.%n%nTi consigliamo di permettere al processo di chiudere automaticamente queste applicazioni.
-ApplicationsFound2=Le seguenti applicazioni stanno usando file che devono essere aggiornati dall'installazione.%n%nTi consigliamo di permettere al processo di chiudere automaticamente queste applicazioni.%n%nAl completamento dell'installazione, il processo tenterà di riavviare le applicazioni.
+ApplicationsFound2=Le seguenti applicazioni stanno usando file che devono essere aggiornati dall'installazione.%n%nTi consigliamo di permettere al processo di chiudere automaticamente queste applicazioni.%n%nAd installazione completata, il processo tenterà di riavviare le applicazioni.
 CloseApplications=Chiudi &automaticamente le applicazioni
 DontCloseApplications=&Non chiudere le applicazioni
 ErrorCloseApplications=L'installazione non è riuscita a chiudere automaticamente tutte le applicazioni.%n%nPrima di proseguire ti raccomandiamo di chiudere tutte le applicazioni che usano file che devono essere aggiornati durante l'installazione.
-PrepareToInstallNeedsRestart=Il programma di installazione deve riavviare il computer.%nDopo aver riavviato il computer esegui di nuovo il programma di installazione per completare l'installazione di [name].%n%nVuoi riavviare il computer ora?
+PrepareToInstallNeedsRestart=Il programma di installazione deve riavviare il computer. Per completare l'installazione di [name] dopo aver riavviato il sistema esegui di nuovo il programma di installazione.%n%nVuoi riavviare il sistema?
 
 ; *** "Installing" wizard page
 WizardInstalling=Installazione in corso
@@ -256,11 +259,11 @@ InstallingLabel=Attendi il completamento dell'installazione di [name] nel comput
 FinishedHeadingLabel=Installazione di [name] completata
 FinishedLabelNoIcons=Installazione di [name] completata.
 FinishedLabel=Installazione di [name] completata.%n%nL'applicazione può essere eseguita selezionando le relative icone.
-ClickFinish=Seleziona "Fine" per uscire dall'installazione.
-FinishedRestartLabel=Per completare l'installazione di [name], è necessario riavviare il sistema.%n%nVuoi riavviare adesso?
-FinishedRestartMessage=Per completare l'installazione di [name], è necessario riavviare il sistema.%n%nVuoi riavviare adesso?
-ShowReadmeCheck=Si, visualizza ora il file LEGGIMI
-YesRadio=&Si, riavvia il sistema adesso
+ClickFinish=Per uscire dall'installazione seleziona "Fine".
+FinishedRestartLabel=Per completare l'installazione di [name], è necessario riavviare il sistema.%n%nVuoi riavviare il sistema?
+FinishedRestartMessage=Per completare l'installazione di [name], è necessario riavviare il sistema.%n%nVuoi riavviare il sistema?
+ShowReadmeCheck=Sì, visualizza ora il file LEGGIMI
+YesRadio=&Sì, riavvia il sistema adesso
 NoRadio=&No, riavvia il sistema più tardi
 ; used for example as 'Run MyProg.exe'
 RunEntryExec=Esegui %1
@@ -280,11 +283,15 @@ AbortRetryIgnoreSelectAction=Seleziona azione
 AbortRetryIgnoreRetry=&Riprova
 AbortRetryIgnoreIgnore=&Ignora questo errore e continua
 AbortRetryIgnoreCancel=Annulla installazione
+RetryCancelSelectAction=Seleziona azione
+RetryCancelRetry=&Riprova
+RetryCancelCancel=Annulla
 
 ; *** Installation status messages
 StatusClosingApplications=Chiusura applicazioni...
 StatusCreateDirs=Creazione cartelle...
 StatusExtractFiles=Estrazione file...
+StatusDownloadFiles=Download file...
 StatusCreateIcons=Creazione icone...
 StatusCreateIniEntries=Creazione voci nei file INI...
 StatusCreateRegistryEntries=Creazione voci di registro...
@@ -295,7 +302,7 @@ StatusRestartingApplications=Riavvio applicazioni...
 StatusRollback=Recupero delle modifiche...
 
 ; *** Misc. errors
-ErrorInternal2=Errore interno %1
+ErrorInternal2=Errore interno: %1
 ErrorFunctionFailedNoCode=%1 fallito
 ErrorFunctionFailed=%1 fallito; codice %2
 ErrorFunctionFailedWithMessage=%1 fallito; codice %2.%n%3
@@ -314,6 +321,14 @@ FileAbortRetryIgnoreSkipNotRecommended=&Salta questo file (non suggerito)
 FileAbortRetryIgnoreIgnoreNotRecommended=&Ignora questo errore e continua (non suggerito)
 SourceIsCorrupted=Il file sorgente è danneggiato
 SourceDoesntExist=Il file sorgente "%1" non esiste
+SourceVerificationFailed=Verifica del file sorgente non riuscita: %1
+VerificationSignatureDoesntExist=File firma "%1" non disponibile
+VerificationSignatureInvalid=Il file firma "%1" non è valido
+VerificationKeyNotFound=Il file firma "%1" usa una chiave sconosciuta
+VerificationFileNameIncorrect=Il nome del file non è corretto
+VerificationFileTagIncorrect=L'etichetta del file non è corretta
+VerificationFileSizeIncorrect=La dimensione del file non è corretta
+VerificationFileHashIncorrect=L'hash del file non è corretto
 ExistingFileReadOnly2=Il file esistente non può essere sostituito in quanto segnato come in sola lettura.
 ExistingFileReadOnlyRetry=&Rimuovi attributo di sola lettura e riprova
 ExistingFileReadOnlyKeepExisting=&Mantieni il file esistente
@@ -332,6 +347,8 @@ ErrorChangingAttr=Si è verificato un errore durante il tentativo di modifica de
 ErrorCreatingTemp=Si è verificato un errore durante la creazione di un file nella cartella di installazione:
 ErrorReadingSource=Si è verificato un errore durante la lettura del file sorgente:
 ErrorCopying=Si è verificato un errore durante la copia di un file:
+ErrorDownloading=Si è verificato un errore durante il download di un file:
+ErrorExtracting=Si è verificato un errore durante l'estrazione di un archivio:
 ErrorReplacingExistingFile=Si è verificato un errore durante la sovrascrittura del file esistente:
 ErrorRestartReplace=Errore durante riavvio o sostituzione:
 ErrorRenamingTemp=Si è verificato un errore durante il tentativo di rinominare un file nella cartella di installazione:
@@ -344,8 +361,8 @@ ErrorRegisterTypeLib=Impossibile registrare la libreria di tipo: %1
 UninstallDisplayNameMark=%1 (%2)
 ; used for example as 'My Program (32-bit, All users)'
 UninstallDisplayNameMarks=%1 (%2, %3)
-UninstallDisplayNameMark32Bit=32bit
-UninstallDisplayNameMark64Bit=64bit
+UninstallDisplayNameMark32Bit=32-bit
+UninstallDisplayNameMark64Bit=64-bit
 UninstallDisplayNameMarkAllUsers=Tutti gli utenti
 UninstallDisplayNameMarkCurrentUser=Utente attuale
 
@@ -364,7 +381,7 @@ OnlyAdminCanUninstall=Questa applicazione può essere disinstallata solo da un u
 UninstallStatusLabel=Attendi fino a che %1 è stato rimosso dal computer.
 UninstalledAll=Disinstallazione di %1 completata.
 UninstalledMost=Disinstallazione di %1 completata.%n%nAlcuni elementi non possono essere rimossi.%n%nDovranno essere rimossi manualmente.
-UninstalledAndNeedsRestart=Per completare la disinstallazione di %1, è necessario riavviare il sistema.%n%nVuoi riavviare il sistema adesso?
+UninstalledAndNeedsRestart=Per completare la disinstallazione di %1, è necessario riavviare il sistema.%n%nVuoi riavviare il sistema?
 UninstallDataCorrupted=Il file "%1" è danneggiato. Impossibile disinstallare
 
 ; *** Uninstallation phase messages
@@ -388,9 +405,9 @@ NameAndVersion=%1 versione %2
 AdditionalIcons=Icone aggiuntive:
 CreateDesktopIcon=Crea un'icona sul &desktop
 CreateQuickLaunchIcon=Crea un'icona nella &barra 'Avvio veloce'
-ProgramOnTheWeb=Sito web di %1
+ProgramOnTheWeb=Sito web %1
 UninstallProgram=Disinstalla %1
-LaunchProgram=Avvia %1
+LaunchProgram=Esegui %1
 AssocFileExtension=&Associa i file con estensione %2 a %1
 AssocingFileExtension=Associazione dei file con estensione %2 a %1...
 AutoStartProgramGroupDescription=Esecuzione automatica:

@@ -1,4 +1,4 @@
-﻿; *** Inno Setup version 6.4.0+ French messages ***
+; *** Inno Setup version 6.5.0+ French messages ***
 ;
 ; To download user-contributed translations of this file, go to:
 ;   https://jrsoftware.org/files/istrans/
@@ -27,6 +27,7 @@
 ; + Added new 6.0.0 messages
 ; + Added new 6.1.0 messages
 ; + Added new 6.4.0 messages
+; + Added new 6.5.0 messages
 
 [LangOptions]
 ; The following three entries are very important. Be sure to read and 
@@ -37,13 +38,11 @@ LanguageCodePage=1252
 ; If the language you are translating to requires special font faces or
 ; sizes, uncomment any of the following entries and change them accordingly.
 ;DialogFontName=
-;DialogFontSize=8
-;WelcomeFontName=Verdana
-;WelcomeFontSize=12
-;TitleFontName=Arial
-;TitleFontSize=29
-;CopyrightFontName=Arial
-;CopyrightFontSize=8
+;DialogFontSize=9
+;DialogFontBaseScaleWidth=7
+;DialogFontBaseScaleHeight=15
+;WelcomeFontName=Segoe UI
+;WelcomeFontSize=14
 
 [Messages]
 
@@ -75,19 +74,19 @@ WindowsVersionNotSupported=Ce programme n'est pas prévu pour fonctionner avec l
 WindowsServicePackRequired=Ce programme a besoin de %1 Service Pack %2 ou d'une version plus récente.
 NotOnThisPlatform=Ce programme ne fonctionne pas sous %1.
 OnlyOnThisPlatform=Ce programme ne peut fonctionner que sous %1.
-OnlyOnTheseArchitectures=Ce programme ne peut être installé que sur des versions de Windows qui supportent ces architectures : %n%n%1
+OnlyOnTheseArchitectures=Ce programme ne peut être installé que sur des versions de Windows qui supportent ces architectures :%n%n%1
 WinVersionTooLowError=Ce programme requiert la version %2 ou supérieure de %1.
 WinVersionTooHighError=Ce programme ne peut pas être installé sous %1 version %2 ou supérieure.
 AdminPrivilegesRequired=Vous devez disposer des droits d'administration de cet ordinateur pour installer ce programme.
 PowerUserPrivilegesRequired=Vous devez disposer des droits d'administration ou faire partie du groupe « Utilisateurs avec pouvoir » de cet ordinateur pour installer ce programme.
 SetupAppRunningError=L'assistant d'installation a détecté que %1 est actuellement en cours d'exécution.%n%nVeuillez fermer toutes les instances de cette application puis cliquer sur OK pour continuer, ou bien cliquer sur Annuler pour abandonner l'installation.
-UninstallAppRunningError=La procédure de désinstallation a détecté que %1 est actuellement en cours d'exécution.%n%nVeuillez fermer toutes les instances de cette application  puis cliquer sur OK pour continuer, ou bien cliquer sur Annuler pour abandonner la désinstallation.
+UninstallAppRunningError=La procédure de désinstallation a détecté que %1 est actuellement en cours d'exécution.%n%nVeuillez fermer toutes les instances de cette application puis cliquer sur OK pour continuer, ou bien cliquer sur Annuler pour abandonner la désinstallation.
 
 ; *** Startup questions
 PrivilegesRequiredOverrideTitle=Choix du Mode d'Installation
 PrivilegesRequiredOverrideInstruction=Choisissez le mode d'installation
 PrivilegesRequiredOverrideText1=%1 peut être installé pour tous les utilisateurs (nécessite des privilèges administrateur), ou seulement pour vous.
-PrivilegesRequiredOverrideText2=%1 peut-être installé seulement pour vous, ou pour tous les utilisateurs (nécessite des privilèges administrateur).
+PrivilegesRequiredOverrideText2=%1 peut être installé seulement pour vous, ou pour tous les utilisateurs (nécessite des privilèges administrateur).
 PrivilegesRequiredOverrideAllUsers=Installer pour &tous les utilisateurs
 PrivilegesRequiredOverrideAllUsersRecommended=Installer pour &tous les utilisateurs (recommandé)
 PrivilegesRequiredOverrideCurrentUser=Installer seulement pour &moi
@@ -185,7 +184,7 @@ BadDirName32=Le nom du dossier ne doit contenir aucun des caractères suivants :
 DirExistsTitle=Dossier existant
 DirExists=Le dossier :%n%n%1%n%nexiste déjà. Souhaitez-vous installer dans ce dossier malgré tout ?
 DirDoesntExistTitle=Le dossier n'existe pas
-DirDoesntExist=Le dossier %n%n%1%n%nn'existe pas. Souhaitez-vous que ce dossier soit créé ?
+DirDoesntExist=Le dossier :%n%n%1%n%nn'existe pas. Souhaitez-vous que ce dossier soit créé ?
 
 ; *** "Select Components" wizard page
 WizardSelectComponents=Composants à installer
@@ -231,23 +230,26 @@ ReadyMemoGroup=Dossier du menu Démarrer :
 ReadyMemoTasks=Tâches supplémentaires :
 
 ; *** TDownloadWizardPage wizard page and DownloadTemporaryFile
-DownloadingLabel=Téléchargement de fichiers supplémentaires...
+DownloadingLabel2=Téléchargement des fichiers...
 ButtonStopDownload=&Arrêter le téléchargement
 StopDownload=Êtes-vous sûr de vouloir arrêter le téléchargement ?
 ErrorDownloadAborted=Téléchargement annulé
 ErrorDownloadFailed=Le téléchargement a échoué : %1 %2
-ErrorDownloadSizeFailed=La récupération de la taille du fichier a échouée : %1 %2
-ErrorFileHash1=Le calcul de l'empreinte du fichier a échoué : %1
-ErrorFileHash2=Empreinte du fichier invalide : attendue %1, trouvée %2
+ErrorDownloadSizeFailed=La récupération de la taille du fichier a échoué : %1 %2
 ErrorProgress=Progression invalide : %1 sur %2
 ErrorFileSize=Taille du fichier invalide : attendue %1, trouvée %2
 
-; *** TExtractionWizardPage wizard page and Extract7ZipArchive
-ExtractionLabel=Extraction de fichiers supplémentaires...
+; *** TExtractionWizardPage wizard page and ExtractArchive
+ExtractingLabel=Extraction des fichiers...
 ButtonStopExtraction=&Arrêter l'extraction
 StopExtraction=Êtes-vous sûr de vouloir arrêter l'extraction ?
 ErrorExtractionAborted=Extraction annulée
 ErrorExtractionFailed=L'extraction a échoué : %1
+
+; *** Archive extraction failure details
+ArchiveIncorrectPassword=Le mot de passe n'est pas correct
+ArchiveIsCorrupted=L'archive est corrompue
+ArchiveUnsupportedFormat=Le format de l'archive n'est pas supporté
 
 ; *** "Preparing to Install" wizard page
 WizardPreparing=Préparation de l'installation
@@ -293,11 +295,15 @@ AbortRetryIgnoreSelectAction=Choisissez une action
 AbortRetryIgnoreRetry=&Recommencer
 AbortRetryIgnoreIgnore=&Ignorer l'erreur et continuer
 AbortRetryIgnoreCancel=Annuler l'installation
+RetryCancelSelectAction=Choisissez une action
+RetryCancelRetry=&Recommencer
+RetryCancelCancel=Annuler
 
 ; *** Installation status messages
 StatusClosingApplications=Ferme les applications...
 StatusCreateDirs=Création des dossiers...
 StatusExtractFiles=Extraction des fichiers...
+StatusDownloadFiles=Téléchargement des fichiers...
 StatusCreateIcons=Création des raccourcis...
 StatusCreateIniEntries=Création des entrées du fichier INI...
 StatusCreateRegistryEntries=Création des entrées de registre...
@@ -327,6 +333,14 @@ FileAbortRetryIgnoreSkipNotRecommended=&Ignorer ce fichier (non recommandé)
 FileAbortRetryIgnoreIgnoreNotRecommended=&Ignorer l'erreur et continuer (non recommandé)
 SourceIsCorrupted=Le fichier source est altéré
 SourceDoesntExist=Le fichier source "%1" n'existe pas
+SourceVerificationFailed=La vérification du fichier source a échoué : %1
+VerificationSignatureDoesntExist=Le fichier de signature "%1" n'existe pas
+VerificationSignatureInvalid=Le fichier de signature "%1" est invalide
+VerificationKeyNotFound=Le fichier de signature "%1" utilise une clé inconnue
+VerificationFileNameIncorrect=Le nom du fichier est incorrect
+VerificationFileTagIncorrect=Le tag du fichier est incorrect
+VerificationFileSizeIncorrect=La taille du fichier est incorrecte
+VerificationFileHashIncorrect=L'empreinte du fichier est incorrecte
 ExistingFileReadOnly2=Le fichier existant ne peut pas être remplacé parce qu'il est protégé par l'attribut lecture seule.
 ExistingFileReadOnlyRetry=&Supprimer l'attribut lecture seule et réessayer
 ExistingFileReadOnlyKeepExisting=&Conserver le fichier existant
@@ -345,6 +359,8 @@ ErrorChangingAttr=Une erreur est survenue en essayant de modifier les attributs 
 ErrorCreatingTemp=Une erreur est survenue en essayant de créer un fichier dans le dossier de destination :
 ErrorReadingSource=Une erreur est survenue lors de la lecture du fichier source :
 ErrorCopying=Une erreur est survenue lors de la copie d'un fichier :
+ErrorDownloading=Une erreur s'est produite en essayant de télécharger un fichier :
+ErrorExtracting=Une erreur s'est produite en essayant d'extraire une archive :
 ErrorReplacingExistingFile=Une erreur est survenue lors du remplacement d'un fichier existant :
 ErrorRestartReplace=Le marquage d'un fichier pour remplacement au redémarrage de l'ordinateur a échoué :
 ErrorRenamingTemp=Une erreur est survenue en essayant de renommer un fichier dans le dossier de destination :
@@ -352,7 +368,7 @@ ErrorRegisterServer=Impossible d'enregistrer la bibliothèque DLL/OCX : %1
 ErrorRegSvr32Failed=RegSvr32 a échoué et a retourné le code d'erreur %1
 ErrorRegisterTypeLib=Impossible d'enregistrer la bibliothèque de type : %1
 
-; *** Nom d'affichage pour la désinstallaton
+; *** Nom d'affichage pour la désinstallation
 ; par exemple 'Mon Programme (32-bit)'
 UninstallDisplayNameMark=%1 (%2)
 ; ou par exemple 'Mon Programme (32-bit, Tous les utilisateurs)'
@@ -378,7 +394,7 @@ UninstallStatusLabel=Veuillez patienter pendant que %1 est retiré de votre ordi
 UninstalledAll=%1 a été correctement désinstallé de cet ordinateur.
 UninstalledMost=La désinstallation de %1 est terminée.%n%nCertains éléments n'ont pas pu être supprimés automatiquement. Vous pouvez les supprimer manuellement.
 UninstalledAndNeedsRestart=Vous devez redémarrer l'ordinateur pour terminer la désinstallation de %1.%n%nVoulez-vous redémarrer maintenant ?
-UninstallDataCorrupted=Le ficher "%1" est altéré. Impossible de désinstaller
+UninstallDataCorrupted=Le fichier "%1" est altéré. Impossible de désinstaller
 
 ; *** Uninstallation phase messages
 ConfirmDeleteSharedFileTitle=Supprimer les fichiers partagés ?
@@ -392,7 +408,7 @@ StatusUninstalling=Désinstallation de %1...
 ShutdownBlockReasonInstallingApp=Installe %1.
 ShutdownBlockReasonUninstallingApp=Désinstalle %1.
 
-; Les messages personnalisés suivants ne sont pas utilisé par l'installation
+; Les messages personnalisés suivants ne sont pas utilisés par l'installation
 ; elle-même, mais si vous les utilisez dans vos scripts, vous devez les
 ; traduire
 

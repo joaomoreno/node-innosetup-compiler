@@ -1,8 +1,9 @@
-; *** Inno Setup version 6.4.0+ Polish messages ***
+; *** Inno Setup version 6.5.0+ Polish messages ***
+; Proofreading, corrections and 5.5.7-6.5.0+ updates:
+; Łukasz Abramczuk <lukasz.abramczuk at gmail.com>
+; Sefinek <contact at sefinek.net>
 ; Original translations up to 5.5.7:
 ; Krzysztof Cynarski <krzysztof at cynarski.net>
-; Proofreading, corrections and 5.5.7-6.4.0+ updates:
-; Łukasz Abramczuk <lukasz.abramczuk at gmail.com>
 ; To download user-contributed translations of this file, go to:
 ;   https://jrsoftware.org/files/istrans/
 ;
@@ -10,11 +11,9 @@
 ; messages that didn't have them already, because on those messages Inno
 ; Setup adds the periods automatically (appending a period would result in
 ; two periods being displayed).
-; last update: 2020/07/26 
+; last update: 2025/08/20
 
 [LangOptions]
-; The following three entries are very important. Be sure to read and 
-; understand the '[LangOptions] section' topic in the help file.
 LanguageName=Polski
 LanguageID=$0415
 LanguageCodePage=1250
@@ -40,12 +39,12 @@ HelpTextNote=
 
 ; *** Startup error messages
 LastErrorMessage=%1.%n%nBłąd %2: %3
-SetupFileMissing=W folderze instalacyjnym brakuje pliku %1.%nProszę o przywrócenie brakujących plików lub uzyskanie nowej kopii programu instalacyjnego.
+SetupFileMissing=W folderze instalacyjnym brakuje pliku %1. Proszę o przywrócenie brakujących plików lub uzyskanie nowej kopii programu instalacyjnego.
 SetupFileCorrupt=Pliki instalacyjne są uszkodzone. Zaleca się uzyskanie nowej kopii programu instalacyjnego.
 SetupFileCorruptOrWrongVer=Pliki instalacyjne są uszkodzone lub niezgodne z tą wersją instalatora. Proszę rozwiązać problem lub uzyskać nową kopię programu instalacyjnego.
 InvalidParameter=W linii komend przekazano nieprawidłowy parametr:%n%n%1
 SetupAlreadyRunning=Instalator jest już uruchomiony.
-WindowsVersionNotSupported=Ta aplikacja nie wspiera aktualnie uruchomionej wersji Windows.
+WindowsVersionNotSupported=Ten program nie jest zgodny z aktualnie zainstalowaną wersją systemu Windows.
 WindowsServicePackRequired=Ta aplikacja wymaga systemu %1 z dodatkiem Service Pack %2 lub nowszym.
 NotOnThisPlatform=Tej aplikacji nie można uruchomić w systemie %1.
 OnlyOnThisPlatform=Ta aplikacja wymaga systemu %1.
@@ -57,7 +56,7 @@ PowerUserPrivilegesRequired=Aby przeprowadzić instalację tej aplikacji, konto 
 SetupAppRunningError=Instalator wykrył, iż aplikacja %1 jest aktualnie uruchomiona.%n%nPrzed wciśnięciem przycisku OK zamknij wszystkie procesy aplikacji. Kliknij przycisk Anuluj, aby przerwać instalację.
 UninstallAppRunningError=Dezinstalator wykrył, iż aplikacja %1 jest aktualnie uruchomiona.%n%nPrzed wciśnięciem przycisku OK zamknij wszystkie procesy aplikacji. Kliknij przycisk Anuluj, aby przerwać dezinstalację.
 
-; *** Startup questions	 ---
+; *** Startup questions
 PrivilegesRequiredOverrideTitle=Wybierz typ instalacji aplikacji
 PrivilegesRequiredOverrideInstruction=Wybierz typ instalacji
 PrivilegesRequiredOverrideText1=Aplikacja %1 może zostać zainstalowana dla wszystkich użytkowników (wymagane są uprawnienia administratora) lub tylko dla bieżącego użytkownika.
@@ -68,17 +67,17 @@ PrivilegesRequiredOverrideCurrentUser=Zainstaluj dla &bieżącego użytkownika
 PrivilegesRequiredOverrideCurrentUserRecommended=Zainstaluj dla &bieżącego użytkownika (zalecane)
 
 ; *** Misc. errors
-ErrorCreatingDir=Instalator nie mógł utworzyć katalogu "%1"
-ErrorTooManyFilesInDir=Nie można utworzyć pliku w katalogu "%1", ponieważ zawiera on zbyt wiele plików
+ErrorCreatingDir=Instalator nie mógł utworzyć folderu "%1"
+ErrorTooManyFilesInDir=Nie można utworzyć pliku w folderze "%1", ponieważ zawiera on zbyt wiele plików
 
 ; *** Setup common messages
 ExitSetupTitle=Zakończ instalację
-ExitSetupMessage=Instalacja nie została zakończona. Jeżeli przerwiesz ją teraz, aplikacja nie zostanie zainstalowana. Można ponowić instalację później poprzez uruchamianie instalatora.%n%nCzy chcesz przerwać instalację?
+ExitSetupMessage=Instalacja nie została zakończona. Jeżeli przerwiesz ją teraz, aplikacja nie zostanie zainstalowana.%n%nMożna ponowić instalację później poprzez uruchamianie instalatora.%n%nCzy chcesz przerwać instalację?
 AboutSetupMenuItem=&O instalatorze...
 AboutSetupTitle=O instalatorze
-AboutSetupMessage=%1 wersja %2%n%3%n%n Strona domowa %1:%n%4
+AboutSetupMessage=%1 wersja %2%n%3%n%nStrona domowa %1:%n%4
 AboutSetupNote=
-TranslatorNote=Wersja polska: Krzysztof Cynarski%n<krzysztof at cynarski.net>%nOd wersji 5.5.7: Łukasz Abramczuk%n<lukasz.abramczuk at gmail.com>
+TranslatorNote=Wersja polska: %nŁukasz Abramczuk <lukasz.abramczuk at gmail.com>%nKrzysztof Cynarski <krzysztof at cynarski.net>%nSefinek <contact at sefinek.net>
 
 ; *** Buttons
 ButtonBack=< &Wstecz
@@ -205,28 +204,31 @@ ReadyMemoGroup=Folder w Menu Start:
 ReadyMemoTasks=Dodatkowe zadania:
 
 ; *** TDownloadWizardPage wizard page and DownloadTemporaryFile
-DownloadingLabel=Pobieranie dodatkowych plików...
+DownloadingLabel2=Pobieranie plików...
 ButtonStopDownload=&Zatrzymaj pobieranie
 StopDownload=Czy na pewno chcesz zatrzymać pobieranie?
 ErrorDownloadAborted=Pobieranie przerwane
 ErrorDownloadFailed=Błąd pobierania: %1 %2
 ErrorDownloadSizeFailed=Pobieranie informacji o rozmiarze nie powiodło się: %1 %2
-ErrorFileHash1=Błąd sumy kontrolnej pliku: %1
-ErrorFileHash2=Nieprawidłowa suma kontrolna pliku: oczekiwano %1, otrzymano %2
 ErrorProgress=Nieprawidłowy postęp: %1 z %2
 ErrorFileSize=Nieprawidłowy rozmiar pliku: oczekiwano %1, otrzymano %2
 
-; *** TExtractionWizardPage wizard page and Extract7ZipArchive
-ExtractionLabel=Wypakowywanie dodatkowych plików...
+; *** TExtractionWizardPage wizard page and ExtractArchive
+ExtractingLabel=Wypakowywanie plików...
 ButtonStopExtraction=&Zatrzymaj wypakowywanie
-StopExtraction=Azy na pewno chcesz zatrzymać wypakowywanie?
+StopExtraction=Czy na pewno chcesz zatrzymać wypakowywanie?
 ErrorExtractionAborted=Wypakowywanie przerwane
 ErrorExtractionFailed=Błąd wypakowywania: %1
+
+; *** Archive extraction failure details
+ArchiveIncorrectPassword=Nieprawidłowe hasło
+ArchiveIsCorrupted=Archiwum jest uszkodzone
+ArchiveUnsupportedFormat=Format archiwum nie jest wspierany
 
 ; *** "Preparing to Install" wizard page
 WizardPreparing=Przygotowanie do instalacji
 PreparingDesc=Instalator przygotowuje instalację aplikacji [name] na komputerze.
-PreviousInstallNotCompleted=Instalacja/dezinstalacja poprzedniej wersji aplikacji nie została zakończona. Aby zakończyć instalację, należy ponownie uruchomić komputer. %n%nNastępnie ponownie uruchom instalator, aby zakończyć instalację aplikacji [name].
+PreviousInstallNotCompleted=Instalacja/dezinstalacja poprzedniej wersji aplikacji nie została zakończona. Aby zakończyć instalację, należy ponownie uruchomić komputer.%n%nNastępnie ponownie uruchom instalator, aby zakończyć instalację aplikacji [name].
 CannotContinue=Instalator nie może kontynuować. Kliknij przycisk Anuluj, aby przerwać instalację.
 ApplicationsFound=Poniższe aplikacje używają plików, które muszą zostać uaktualnione przez instalator. Zaleca się zezwolić na automatyczne zamknięcie tych aplikacji przez program instalacyjny.
 ApplicationsFound2=Poniższe aplikacje używają plików, które muszą zostać uaktualnione przez instalator. Zaleca się zezwolić na automatyczne zamknięcie tych aplikacji przez program instalacyjny. Po zakończonej instalacji instalator podejmie próbę ich ponownego uruchomienia.
@@ -267,11 +269,15 @@ AbortRetryIgnoreSelectAction=Wybierz operację
 AbortRetryIgnoreRetry=Spróbuj &ponownie
 AbortRetryIgnoreIgnore=Z&ignoruj błąd i kontynuuj
 AbortRetryIgnoreCancel=Przerwij instalację
+RetryCancelSelectAction=Wybierz operację
+RetryCancelRetry=Spróbuj &ponownie
+RetryCancelCancel=Anuluj
 
 ; *** Installation status messages
 StatusClosingApplications=Zamykanie aplikacji...
 StatusCreateDirs=Tworzenie folderów...
 StatusExtractFiles=Dekompresja plików...
+StatusDownloadFiles=Pobieranie plików...
 StatusCreateIcons=Tworzenie skrótów aplikacji...
 StatusCreateIniEntries=Tworzenie zapisów w plikach INI...
 StatusCreateRegistryEntries=Tworzenie zapisów w rejestrze...
@@ -301,6 +307,14 @@ FileAbortRetryIgnoreSkipNotRecommended=&Pomiń plik (niezalecane)
 FileAbortRetryIgnoreIgnoreNotRecommended=Z&ignoruj błąd i kontynuuj (niezalecane)
 SourceIsCorrupted=Plik źródłowy jest uszkodzony
 SourceDoesntExist=Plik źródłowy "%1" nie istnieje
+SourceVerificationFailed=Weryfikacja pliku źródłowego nie powiodła się: %1
+VerificationSignatureDoesntExist=Plik podpisu "%1" nie istnieje
+VerificationSignatureInvalid=Plik podpisu "%1" jest nieprawidłowy
+VerificationKeyNotFound=Plik podpisu "%1" wykorzystuje nieznany klucz
+VerificationFileNameIncorrect=Nazwa pliku jest nieprawidłowa
+VerificationFileTagIncorrect=Etykieta pliku jest nieprawidłowa
+VerificationFileSizeIncorrect=Rozmiar pliku jest nieprawidłowy
+VerificationFileHashIncorrect=Suma kontrolna pliku jest nieprawidłowa
 ExistingFileReadOnly2=Istniejący plik nie może zostać zastąpiony, gdyż jest oznaczony jako "Tylko do odczytu".
 ExistingFileReadOnlyRetry=&Usuń atrybut "Tylko do odczytu" i spróbuj ponownie
 ExistingFileReadOnlyKeepExisting=&Zachowaj istniejący plik
@@ -319,12 +333,14 @@ ErrorChangingAttr=Wystąpił błąd podczas próby zmiany atrybutów pliku docel
 ErrorCreatingTemp=Wystąpił błąd podczas próby utworzenia pliku w folderze docelowym:
 ErrorReadingSource=Wystąpił błąd podczas próby odczytu pliku źródłowego:
 ErrorCopying=Wystąpił błąd podczas próby kopiowania pliku:
+ErrorDownloading=Wystąpił błąd podczas próby pobrania pliku:
+ErrorExtracting=Wystąpił błąd podczas próby wypakowywania archiwum:
 ErrorReplacingExistingFile=Wystąpił błąd podczas próby zamiany istniejącego pliku:
 ErrorRestartReplace=Próba zastąpienia plików przy ponownym uruchomieniu komputera nie powiodła się.
 ErrorRenamingTemp=Wystąpił błąd podczas próby zmiany nazwy pliku w folderze docelowym:
 ErrorRegisterServer=Nie można zarejestrować DLL/OCX: %1
 ErrorRegSvr32Failed=Funkcja RegSvr32 zakończyła się z kodem błędu %1
-ErrorRegisterTypeLib=Nie mogę zarejestrować biblioteki typów: %1
+ErrorRegisterTypeLib=Nie można zarejestrować biblioteki typów: %1
 
 ; *** Uninstall display name markings
 ; used for example as 'My Program (32-bit)'
@@ -342,9 +358,9 @@ ErrorRestartingComputer=Instalator nie mógł ponownie uruchomić tego komputera
 
 ; *** Uninstaller messages
 UninstallNotFound=Plik "%1" nie istnieje. Nie można przeprowadzić dezinstalacji.
-UninstallOpenError=Plik "%1" nie mógł zostać otwarty. Nie można przeprowadzić dezinstalacji.
-UninstallUnsupportedVer=Ta wersja programu dezinstalacyjnego nie rozpoznaje formatu logu dezinstalacji w pliku "%1". Nie można przeprowadzić dezinstalacji.
-UninstallUnknownEntry=W logu dezinstalacji wystąpiła nieznana pozycja (%1)
+UninstallOpenError=Plik "%1" nie mógł zostać otwarty. Nie można przeprowadzić dezinstalacji
+UninstallUnsupportedVer=Ta wersja programu dezinstalacyjnego nie rozpoznaje formatu logu dezinstalacji w pliku "%1". Nie można przeprowadzić dezinstalacji
+UninstallUnknownEntry=Napotkano nieznany wpis (%1) w logu dezinstalacji
 ConfirmUninstall=Czy na pewno chcesz usunąć aplikację %1 i wszystkie jej składniki?
 UninstallOnlyOnWin64=Ta aplikacja może być odinstalowana tylko w 64-bitowej wersji systemu Windows.
 OnlyAdminCanUninstall=Ta instalacja może być odinstalowana tylko przez użytkownika z uprawnieniami administratora.
@@ -352,7 +368,7 @@ UninstallStatusLabel=Poczekaj, aż aplikacja %1 zostanie usunięta z komputera.
 UninstalledAll=Aplikacja %1 została usunięta z komputera.
 UninstalledMost=Dezinstalacja aplikacji %1 zakończyła się.%n%nNiektóre elementy nie mogły zostać usunięte. Należy usunąć je samodzielnie.
 UninstalledAndNeedsRestart=Komputer musi zostać ponownie uruchomiony, aby zakończyć proces dezinstalacji aplikacji %1.%n%nCzy chcesz teraz ponownie uruchomić komputer?
-UninstallDataCorrupted=Plik "%1" jest uszkodzony. Nie można przeprowadzić dezinstalacji.
+UninstallDataCorrupted=Plik "%1" jest uszkodzony. Nie można przeprowadzić dezinstalacji
 
 ; *** Uninstallation phase messages
 ConfirmDeleteSharedFileTitle=Usunąć plik współdzielony?

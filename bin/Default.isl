@@ -1,29 +1,55 @@
-﻿; *** Inno Setup version 6.4.0+ English messages ***
+; *** Inno Setup version 6.5.0+ English messages ***
 ;
 ; To download user-contributed translations of this file, go to:
 ;   https://jrsoftware.org/files/istrans/
 ;
-; Note: When translating this text, do not add periods (.) to the end of
-; messages that didn't have them already, because on those messages Inno
-; Setup adds the periods automatically (appending a period would result in
-; two periods being displayed).
+; Note: When translating this text:
+; - All translations should back-translate to the same meaning.
+; - Do not add to or change the meaning of messages to suit your personal taste.
+; - Do not add or remove sentences, or add or omit information within sentences.
+; - Do not remove these words: all, only, automatically, now, later, may, must, and not.
+; - Do not add periods (.) or colons (:) or ellipses (...) to the end of messages that didn't have them already.
+;   Exception: for languages with their own period character, such as Japanese and Chinese, it was added
+;   to the end of messages as needed.
+; - Do not remove periods or colons or ellipses or question marks from the end of messages.
+;   Exception: Thai and Lao remove trailing periods and question marks.
+; - Do not replace periods with colons. Replacing '...' with '…' is allowed.
+; - Do not add or remove number placeholders (%1, %2, etc.). Changing the order is allowed.
+; - Do not add or remove named placeholders ([name], [name/ver], etc.). Do not replace one with another.
+; - Do not add or remove line breaks (%n).
+; - Do not add accelerators (&) or create collisions. Remove an accelerator only if it cannot be moved to another letter.
+; - Do not add new custom messages to the [CustomMessages] section.
+; - Do not translate comments like these.
+; - Keep AboutSetupNote empty.
+; Before you start, decide how you will translate each of these recurring terms:
+; - Setup, Uninstall (the program), uninstall (the verb), Cannot uninstall,
+;   program, application, component, task,
+;   shortcut, Start Menu, folder, directory, path, location, drive,
+;   existing file, source file, registry, INI entries, README,
+;   computer, Windows, version, administrator, all users, current user,
+;   Downloading files, Extracting files, aborted, corrupted, close (applications), restart,
+;   Select action, try again, anyway, at least,
+;   and the button captions OK, Cancel, Yes, No, Next, Back, Install, Browse, Finish.
+; - When in doubt, use Microsoft Terminology Search from:
+;   https://msit.powerbi.com/view?r=eyJrIjoiODJmYjU4Y2YtM2M0ZC00YzYxLWE1YTktNzFjYmYxNTAxNjQ0IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9
+; Removing this section from your translation is allowed, but do not disregard it.
 
 [LangOptions]
-; The following three entries are very important. Be sure to read and 
+; The following three entries are very important. Be sure to read and
 ; understand the '[LangOptions] section' topic in the help file.
 LanguageName=English
 LanguageID=$0409
+; LanguageCodePage should always be set if possible, even if this file is Unicode
+; For English it's set to zero anyway because English only uses ASCII characters
 LanguageCodePage=0
 ; If the language you are translating to requires special font faces or
 ; sizes, uncomment any of the following entries and change them accordingly.
 ;DialogFontName=
-;DialogFontSize=8
-;WelcomeFontName=Verdana
-;WelcomeFontSize=12
-;TitleFontName=Arial
-;TitleFontSize=29
-;CopyrightFontName=Arial
-;CopyrightFontSize=8
+;DialogFontSize=9
+;DialogFontBaseScaleWidth=7
+;DialogFontBaseScaleHeight=15
+;WelcomeFontName=Segoe UI
+;WelcomeFontSize=14
 
 [Messages]
 
@@ -59,7 +85,9 @@ OnlyOnTheseArchitectures=This program can only be installed on versions of Windo
 WinVersionTooLowError=This program requires %1 version %2 or later.
 WinVersionTooHighError=This program cannot be installed on %1 version %2 or later.
 AdminPrivilegesRequired=You must be logged in as an administrator when installing this program.
+; 'Power Users group' is an outdated term but should still be translated, not dropped or modernized
 PowerUserPrivilegesRequired=You must be logged in as an administrator or as a member of the Power Users group when installing this program.
+; 'instance' may also be translated as 'copy'
 SetupAppRunningError=Setup has detected that %1 is currently running.%n%nPlease close all instances of it now, then click OK to continue, or Cancel to exit.
 UninstallAppRunningError=Uninstall has detected that %1 is currently running.%n%nPlease close all instances of it now, then click OK to continue, or Cancel to exit.
 
@@ -82,7 +110,7 @@ ExitSetupTitle=Exit Setup
 ExitSetupMessage=Setup is not complete. If you exit now, the program will not be installed.%n%nYou may run Setup again at another time to complete the installation.%n%nExit Setup?
 AboutSetupMenuItem=&About Setup...
 AboutSetupTitle=About Setup
-AboutSetupMessage=%1 version %2%n%3%n%n%1 home page:%n%4
+AboutSetupMessage=%1 %2%n%3%n%n%1 home page:%n%4
 AboutSetupNote=
 TranslatorNote=
 
@@ -155,7 +183,7 @@ DiskSpaceGBLabel=At least [gb] GB of free disk space is required.
 DiskSpaceMBLabel=At least [mb] MB of free disk space is required.
 CannotInstallToNetworkDrive=Setup cannot install to a network drive.
 CannotInstallToUNCPath=Setup cannot install to a UNC path.
-InvalidPath=You must enter a full path with drive letter; for example:%n%nC:\APP%n%nor a UNC path in the form:%n%n\\server\share
+InvalidPath=You must enter a full path with drive letter; for example:%n%nC:\App%n%nor a UNC path in the form:%n%n\\server\share
 InvalidDrive=The drive or UNC share you selected does not exist or is not accessible. Please select another.
 DiskSpaceWarningTitle=Not Enough Disk Space
 DiskSpaceWarning=Setup requires at least %1 KB of free space to install, but the selected drive only has %2 KB available.%n%nDo you want to continue anyway?
@@ -171,8 +199,9 @@ DirDoesntExist=The folder:%n%n%1%n%ndoes not exist. Would you like the folder to
 WizardSelectComponents=Select Components
 SelectComponentsDesc=Which components should be installed?
 SelectComponentsLabel2=Select the components you want to install; clear the components you do not want to install. Click Next when you are ready to continue.
+; don't translate 'Full' as 'Normal' or 'Default'
 FullInstallation=Full installation
-; if possible don't translate 'Compact' as 'Minimal' (I mean 'Minimal' in your language)
+; don't translate 'Compact' as 'Minimal' or 'Default'
 CompactInstallation=Compact installation
 CustomInstallation=Custom installation
 NoUninstallWarningTitle=Components Exist
@@ -211,23 +240,26 @@ ReadyMemoGroup=Start Menu folder:
 ReadyMemoTasks=Additional tasks:
 
 ; *** TDownloadWizardPage wizard page and DownloadTemporaryFile
-DownloadingLabel=Downloading additional files...
+DownloadingLabel2=Downloading files...
 ButtonStopDownload=&Stop download
 StopDownload=Are you sure you want to stop the download?
 ErrorDownloadAborted=Download aborted
 ErrorDownloadFailed=Download failed: %1 %2
 ErrorDownloadSizeFailed=Getting size failed: %1 %2
-ErrorFileHash1=File hash failed: %1
-ErrorFileHash2=Invalid file hash: expected %1, found %2
 ErrorProgress=Invalid progress: %1 of %2
 ErrorFileSize=Invalid file size: expected %1, found %2
 
-; *** TExtractionWizardPage wizard page and Extract7ZipArchive
-ExtractionLabel=Extracting additional files...
+; *** TExtractionWizardPage wizard page and ExtractArchive
+ExtractingLabel=Extracting files...
 ButtonStopExtraction=&Stop extraction
 StopExtraction=Are you sure you want to stop the extraction?
 ErrorExtractionAborted=Extraction aborted
 ErrorExtractionFailed=Extraction failed: %1
+
+; *** Archive extraction failure details
+ArchiveIncorrectPassword=The password is incorrect
+ArchiveIsCorrupted=The archive is corrupted
+ArchiveUnsupportedFormat=The archive format is unsupported
 
 ; *** "Preparing to Install" wizard page
 WizardPreparing=Preparing to Install
@@ -273,11 +305,15 @@ AbortRetryIgnoreSelectAction=Select action
 AbortRetryIgnoreRetry=&Try again
 AbortRetryIgnoreIgnore=&Ignore the error and continue
 AbortRetryIgnoreCancel=Cancel installation
+RetryCancelSelectAction=Select action
+RetryCancelRetry=&Try again
+RetryCancelCancel=Cancel
 
 ; *** Installation status messages
 StatusClosingApplications=Closing applications...
 StatusCreateDirs=Creating directories...
 StatusExtractFiles=Extracting files...
+StatusDownloadFiles=Downloading files...
 StatusCreateIcons=Creating shortcuts...
 StatusCreateIniEntries=Creating INI entries...
 StatusCreateRegistryEntries=Creating registry entries...
@@ -307,6 +343,14 @@ FileAbortRetryIgnoreSkipNotRecommended=&Skip this file (not recommended)
 FileAbortRetryIgnoreIgnoreNotRecommended=&Ignore the error and continue (not recommended)
 SourceIsCorrupted=The source file is corrupted
 SourceDoesntExist=The source file "%1" does not exist
+SourceVerificationFailed=Verification of the source file failed: %1
+VerificationSignatureDoesntExist=The signature file "%1" does not exist
+VerificationSignatureInvalid=The signature file "%1" is invalid
+VerificationKeyNotFound=The signature file "%1" uses an unknown key
+VerificationFileNameIncorrect=The name of the file is incorrect
+VerificationFileTagIncorrect=The tag of the file is incorrect
+VerificationFileSizeIncorrect=The size of the file is incorrect
+VerificationFileHashIncorrect=The hash of the file is incorrect
 ExistingFileReadOnly2=The existing file could not be replaced because it is marked read-only.
 ExistingFileReadOnlyRetry=&Remove the read-only attribute and try again
 ExistingFileReadOnlyKeepExisting=&Keep the existing file
@@ -325,7 +369,10 @@ ErrorChangingAttr=An error occurred while trying to change the attributes of the
 ErrorCreatingTemp=An error occurred while trying to create a file in the destination directory:
 ErrorReadingSource=An error occurred while trying to read the source file:
 ErrorCopying=An error occurred while trying to copy a file:
+ErrorDownloading=An error occurred while trying to download a file:
+ErrorExtracting=An error occurred while trying to extract an archive:
 ErrorReplacingExistingFile=An error occurred while trying to replace the existing file:
+; 'RestartReplace' is an internal name, you may keep it as is
 ErrorRestartReplace=RestartReplace failed:
 ErrorRenamingTemp=An error occurred while trying to rename a file in the destination directory:
 ErrorRegisterServer=Unable to register the DLL/OCX: %1

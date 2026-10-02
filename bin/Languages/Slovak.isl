@@ -1,6 +1,6 @@
-﻿; ******************************************************
+; ******************************************************
 ; ***                                                ***
-; *** Inno Setup version 6.4.0+ Slovak messages      ***
+; *** Inno Setup version 6.5.0+ Slovak messages      ***
 ; ***                                                ***
 ; *** Original Author:                               ***
 ; ***                                                ***
@@ -14,14 +14,14 @@
 ; ***   Slappy (slappy AT pobox.sk)                  ***
 ; ***   Comments: (mitems58 AT gmail.com)            ***
 ; ***                                                ***
-; *** Update: 12.12.2024                             ***
+; *** Update: 29.06.2025                             ***
 ; ***                                                ***
 ; ******************************************************
 ;
 ; 
 
 [LangOptions]
-LanguageName=Sloven<010D>ina
+LanguageName=Slovenčina
 LanguageID=$041b
 LanguageCodePage=1250
 
@@ -49,7 +49,7 @@ LastErrorMessage=%1.%n%nChyba %2: %3
 SetupFileMissing=Inštalačný adresár neobsahuje súbor %1. Opravte túto chybu, alebo si zaobstarajte novú kópiu tohto produktu.
 SetupFileCorrupt=Súbory Sprievodcu inštaláciou sú poškodené. Zaobstarajte si novú kópiu tohto produktu.
 SetupFileCorruptOrWrongVer=Súbory Sprievodcu inštaláciou sú poškodené alebo sa nezhodujú s touto verziou Sprievodcu inštaláciou. Opravte túto chybu, alebo si zaobstarajte novú kópiu tohto produktu.
-InvalidParameter=Nesprávny parameter na príkazovom riadku: %n%n%1
+InvalidParameter=Nesprávny parameter na príkazovom riadku:%n%n%1
 SetupAlreadyRunning=Inštalácia už prebieha.
 WindowsVersionNotSupported=Tento program nepodporuje vašu verziu systému Windows.
 WindowsServicePackRequired=Tento program vyžaduje %1 Service Pack %2 alebo novší.
@@ -113,7 +113,7 @@ BrowseDialogLabel=Z dole uvedeného zoznamu vyberte adresár a kliknite na "OK".
 NewFolderName=Nový adresár
 
 ; *** "Welcome" wizard page
-WelcomeLabel1=Víta Vás Sprievodca inštaláciou produktu [name].
+WelcomeLabel1=Víta Vás Sprievodca inštaláciou produktu [name]
 WelcomeLabel2=Produkt [name/ver] sa nainštaluje do tohto počítača.%n%nSkôr, ako budete pokračovať, odporúčame ukončiť všetky spustené aplikácie.
 
 ; *** "Password" wizard page
@@ -135,7 +135,7 @@ WizardInfoBefore=Informácie
 InfoBeforeLabel=Skôr, ako budete pokračovať, prečítajte si tieto dôležité informácie, prosím.
 InfoBeforeClickLabel=Pokračujte v inštalácii kliknutím na tlačidlo "Ďalej".
 WizardInfoAfter=Informácie
-InfoAfterLabel=Skôr, ako budete pokračovať, prečítajte si tieto dôležité informácie prosím.
+InfoAfterLabel=Skôr, ako budete pokračovať, prečítajte si tieto dôležité informácie, prosím.
 InfoAfterClickLabel=Pokračujte v inštalácii kliknutím na tlačidlo "Ďalej".
 
 ; *** "User Information" wizard page
@@ -165,18 +165,18 @@ BadDirName32=Názvy adresárov nesmú obsahovať žiadny z nasledujúcich znakov
 DirExistsTitle=Adresár už existuje
 DirExists=Adresár:%n%n%1%n%nuž existuje. Aj napriek tomu chcete nainštalovať produkt do tohto adresára?
 DirDoesntExistTitle=Adresár neexistuje
-DirDoesntExist=Adresár: %n%n%1%n%nešte neexistuje. Má sa tento adresár vytvoriť?
+DirDoesntExist=Adresár:%n%n%1%n%nešte neexistuje. Má sa tento adresár vytvoriť?
 
 ; *** "Select Components" wizard page
 WizardSelectComponents=Vyberte komponenty
 SelectComponentsDesc=Aké komponenty majú byť nainštalované?
-SelectComponentsLabel2=Zaškrtnite iba komponenty, ktoré chcete nainštalovať; komponenty, ktoré se nemajú inštalovať, nechajte nezaškrtnuté. Pokračujte kliknutím na tlačidlo "Ďalej".
+SelectComponentsLabel2=Zaškrtnite iba komponenty, ktoré chcete nainštalovať; komponenty, ktoré sa nemajú inštalovať, nechajte nezaškrtnuté. Pokračujte kliknutím na tlačidlo "Ďalej".
 FullInstallation=Úplná inštalácia
 ; if possible don't translate 'Compact' as 'Minimal' (I mean 'Minimal' in your language)
 CompactInstallation=Kompaktná inštalácia
 CustomInstallation=Voliteľná inštalácia
 NoUninstallWarningTitle=Komponenty existujú
-NoUninstallWarning=Sprievodca inštaláciou zistil že nasledujúce komponenty už sú v tomto počítači nainštalované:%n%n%1%n%nAk ich teraz nezahrniete do výberu, nebudú neskôr odinštalované.%n%nAj napriek tomu chcete pokračovať?
+NoUninstallWarning=Sprievodca inštaláciou zistil, že nasledujúce komponenty už sú v tomto počítači nainštalované:%n%n%1%n%nAk ich teraz nezahrniete do výberu, nebudú neskôr odinštalované.%n%nAj napriek tomu chcete pokračovať?
 ComponentSize1=%1 KB
 ComponentSize2=%1 MB
 ComponentsDiskSpaceGBLabel=Vybrané komponenty vyžadujú najmenej [gb] GB miesta v disku.
@@ -211,23 +211,26 @@ ReadyMemoGroup=Skupina v ponuke Štart:
 ReadyMemoTasks=Ďalšie úlohy:
 
 ; *** TDownloadWizardPage wizard page and DownloadTemporaryFile
-DownloadingLabel=Sťahovanie dodatočných súborov...
+DownloadingLabel2=Sťahovanie súborov...
 ButtonStopDownload=&Zastaviť sťahovanie
 StopDownload=Naozaj chcete zastaviť sťahovanie?
 ErrorDownloadAborted=Sťahovanie prerušené
 ErrorDownloadFailed=Sťahovanie zlyhalo: %1 %2
 ErrorDownloadSizeFailed=Zlyhalo získanie veľkosti: %1 %2
-ErrorFileHash1=Kontrola hodnoty súboru zlyhala: %1
-ErrorFileHash2=Nesprávna kontrolná hodnota: očakávala sa %1, zistená %2
 ErrorProgress=Nesprávny priebeh: %1 z %2
 ErrorFileSize=Nesprávna veľkosť súboru: očakávala sa %1, zistená %2
 
-; *** TExtractionWizardPage wizard page and Extract7ZipArchive
-ExtractionLabel=Rozbaľovanie dodatočných súborov...
+; *** TExtractionWizardPage wizard page and ExtractArchive
+ExtractingLabel=Rozbaľovanie súborov...
 ButtonStopExtraction=&Zastaviť rozbaľovanie
 StopExtraction=Naozaj chcete zastaviť rozbaľovanie?
 ErrorExtractionAborted=Rozbaľovanie prerušené
 ErrorExtractionFailed=Rozbaľovanie zlyhalo: %1
+
+; *** Archive extraction failure details
+ArchiveIncorrectPassword=Nesprávne heslo
+ArchiveIsCorrupted=Archív je poškodený
+ArchiveUnsupportedFormat=Formát archívu nie je podporovaný
 
 ; *** "Preparing to Install" wizard page
 WizardPreparing=Príprava inštalácie
@@ -274,11 +277,15 @@ AbortRetryIgnoreSelectAction=Vyberte akciu
 AbortRetryIgnoreRetry=&Skúsiť znovu
 AbortRetryIgnoreIgnore=&Ignorovať chybu a pokračovať
 AbortRetryIgnoreCancel=Zrušiť inštaláciu
+RetryCancelSelectAction=Vyberte akciu
+RetryCancelRetry=&Skúsiť znovu
+RetryCancelCancel=Zrušiť
 
 ; *** Installation status messages
 StatusClosingApplications=Ukončovanie aplikácií...
 StatusCreateDirs=Vytvárajú sa adresáre...
 StatusExtractFiles=Rozbaľujú sa súbory...
+StatusDownloadFiles=Sťahujú sa súbory...
 StatusCreateIcons=Vytvárajú sa ikony a zástupcovia...
 StatusCreateIniEntries=Vytvárajú sa záznamy v konfiguračných súboroch...
 StatusCreateRegistryEntries=Vytvárajú sa záznamy v systémovom registri...
@@ -308,6 +315,14 @@ FileAbortRetryIgnoreSkipNotRecommended=&Preskočiť tento súbor (neodporúčan�
 FileAbortRetryIgnoreIgnoreNotRecommended=&Ignorovať chybu a pokračovať (neodporúčané)
 SourceIsCorrupted=Zdrojový súbor je poškodený
 SourceDoesntExist=Zdrojový súbor "%1" neexistuje
+SourceVerificationFailed=Overenie zdrojového súboru zlyhalo: %1
+VerificationSignatureDoesntExist=Podpis pre súbor "%1" neexistuje
+VerificationSignatureInvalid=Podpis pre súbor "%1" je nesprávny
+VerificationKeyNotFound=Súbor s podpisom "%1" používa neznámy kľúč
+VerificationFileNameIncorrect=Názov súboru je nesprávny
+VerificationFileTagIncorrect=Tag súboru je nesprávny
+VerificationFileSizeIncorrect=Veľkosť súboru je nesprávna
+VerificationFileHashIncorrect=Hash súboru je nesprávny
 ExistingFileReadOnly2=Existujúci súbor nie je možné prepísať, pretože je označený atribútom Iba na čítanie.
 ExistingFileReadOnlyRetry=&Odstrániť atribút Iba na čítanie a skúsiť znovu
 ExistingFileReadOnlyKeepExisting=&Ponechať existujúci súbor
@@ -326,6 +341,8 @@ ErrorChangingAttr=Došlo k chybe pri pokuse o modifikáciu atribútov existujúc
 ErrorCreatingTemp=Došlo k chybe pri pokuse o vytvorenie súboru v cieľovom adresári:
 ErrorReadingSource=Došlo k chybe pri pokuse o čítanie zdrojového súboru:
 ErrorCopying=Došlo k chybe pri pokuse o skopírovanie súboru:
+ErrorDownloading=Došlo k chybe pri pokuse o stiahnutie súboru:
+ErrorExtracting=Došlo k chybe pri pokuse o rozbalenie archívu:
 ErrorReplacingExistingFile=Došlo k chybe pri pokuse o nahradenie existujúceho súboru:
 ErrorRestartReplace=Zlyhala funkcia "RestartReplace" Sprievodcu inštaláciou:
 ErrorRenamingTemp=Došlo k chybe pri pokuse o premenovanie súboru v cieľovom adresári:
@@ -338,8 +355,8 @@ ErrorRegisterTypeLib=Nedá sa vykonať registrácia typovej knižnice: %1
 UninstallDisplayNameMark=%1 (%2)
 ; used for example as 'My Program (32-bit, All users)'
 UninstallDisplayNameMarks=%1 (%2, %3)
-UninstallDisplayNameMark32Bit=32bitový
-UninstallDisplayNameMark64Bit=64bitový
+UninstallDisplayNameMark32Bit=32-bitový
+UninstallDisplayNameMark64Bit=64-bitový
 UninstallDisplayNameMarkAllUsers=Všetci užívatelia
 UninstallDisplayNameMarkCurrentUser=Aktuálny užívateľ
 
@@ -349,7 +366,7 @@ ErrorRestartingComputer=Sprievodcovi inštaláciou sa nepodarilo reštartovať t
 
 ; *** Uninstaller messages
 UninstallNotFound=Súbor "%1" neexistuje. Produkt sa nedá odinštalovať.
-UninstallOpenError=Súbor "%1" nie je možné otvoriť. Produkt nie je možné odinštalovať.
+UninstallOpenError=Súbor "%1" nie je možné otvoriť. Produkt nie je možné odinštalovať
 UninstallUnsupportedVer=Sprievodcovi odinštaláciou sa nepodarilo rozpoznať formát súboru obsahujúceho informácie na odinštalovanie produktu "%1". Produkt sa nedá odinštalovať
 UninstallUnknownEntry=V súbore obsahujúcom informácie na odinštalovanie produktu bola zistená neznáma položka (%1)
 ConfirmUninstall=Naozaj chcete odinštalovať %1 a všetky jeho komponenty?
@@ -383,7 +400,7 @@ AdditionalIcons=Ďalší zástupcovia:
 CreateDesktopIcon=Vytvoriť zástupcu na &ploche
 CreateQuickLaunchIcon=Vytvoriť zástupcu na paneli &Rýchle spustenie
 ProgramOnTheWeb=Aplikácia %1 na internete
-UninstallProgram=Odinštalovať aplikáciu %1 
+UninstallProgram=Odinštalovať aplikáciu %1
 LaunchProgram=Spustiť aplikáciu %1
 AssocFileExtension=Vytvoriť &asociáciu medzi súbormi typu %2 a aplikáciou %1
 AssocingFileExtension=Vytvára sa asociácia medzi súbormi typu %2 a aplikáciou %1...
